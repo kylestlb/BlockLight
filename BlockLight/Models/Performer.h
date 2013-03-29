@@ -45,6 +45,6 @@
 @property (strong) NSNumber* uniqueID;
 
 @property  (nonatomic) BOOL visible; 
-@property (readonly, strong) UIImage* icon; 
+@property (nonatomic, strong) UIImage* icon; 
 
 @end

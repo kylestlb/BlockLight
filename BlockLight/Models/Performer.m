@@ -42,4 +42,37 @@
 @synthesize visible = _visible; 
 @synthesize icon = _icon; 
 
+- (void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeObject:_name forKey:@"performerName"];
+    [encoder encodeObject:_role forKey:@"performerRole"];
+    [encoder encodeObject:_stagePresence forKey:@"performerPresence"];
+    [encoder encodeObject:_notes forKey:@"performerNotes"];
+    [encoder encodeObject:_phoneNumber forKey:@"performerPhone"];
+    [encoder encodeObject:_email forKey:@"performerEmail"];
+    [encoder encodeObject:_voice forKey:@"performerVoice"];
+    [encoder encodeObject:_gender forKey:@"performerGender"];
+    [encoder encodeObject:_height forKey:@"performerHeight"];
+    [encoder encodeObject:_uniqueID forKey:@"performerID"];
+    [encoder encodeBool:_visible forKey:@"performerVisible"];
+    [encoder encodeObject:UIImagePNGRepresentation(_icon) forKey:@"performerIcon"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder{
+    if(self = [super init]){
+        self.name = [decoder decodeObjectForKey:@"performerName"];
+        self.role = [decoder decodeObjectForKey:@"performerRole"];
+        self.stagePresence = [decoder decodeObjectForKey:@"performerPresence"];
+        self.notes = [decoder decodeObjectForKey:@"performerNotes"];
+        self.phoneNumber = [decoder decodeObjectForKey:@"performerPhone"];
+        self.email = [decoder decodeObjectForKey:@"performerEmail"];
+        self.voice = [decoder decodeObjectForKey:@"performerVoice"];
+        self.gender = [decoder decodeObjectForKey:@"performerGender"];
+        self.height = [decoder decodeObjectForKey:@"performerHeight"];
+        self.uniqueID = [decoder decodeObjectForKey:@"performerID"];
+        self.visible = [decoder decodeBoolForKey:@"performerVisible"];
+        self.icon = [UIImage imageWithData:[decoder decodeObjectForKey:@"performerIcon"]];
+    }
+    return self;
+}
+
 @end

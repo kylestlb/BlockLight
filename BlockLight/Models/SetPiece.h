@@ -29,7 +29,7 @@
 
 @property  (nonatomic) BOOL visible; 
 @property (strong) NSMutableArray* frameLocation; 
-@property (readonly, strong) UIImage* icon;
+@property (nonatomic, strong) UIImage* icon;
 
 
 @end
