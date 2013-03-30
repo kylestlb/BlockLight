@@ -163,11 +163,9 @@
 	break;
 	
 	case 3:{
-	
-	// DummyMainViewController* dummymainViewController = [[DummyMainViewController alloc] init];
-	 AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-		//[appDelegate.navController pushViewController:dummymainViewController animated:YES];
-		[appDelegate toggleSandboxView];
+			
+	AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate toggleSandboxView];
 		
 				
 	}

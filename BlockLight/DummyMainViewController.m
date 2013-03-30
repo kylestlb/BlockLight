@@ -79,7 +79,9 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
+	AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate toggleSplitViewWithProduction:_production andGroup:_group];
+
 	//Set up navigation bar style and buttons for Tool Bar
 	[self.navigationController.toolbar setTintColor:[UIColor blackColor]];
 	
