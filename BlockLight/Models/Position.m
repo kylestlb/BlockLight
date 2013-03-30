@@ -11,6 +11,10 @@
 #import "Position.h"
 
 @implementation Position
+
+@synthesize x;
+@synthesize y; 
+
 -(id) init{
   
   self = [super init];
@@ -21,7 +25,18 @@
   return self; 
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeInt:x forKey:@"positionX"];
+    [encoder encodeInt:y forKey:@"positionY"];
+}
 
-@synthesize x;
-@synthesize y; 
+- (id)initWithCoder:(NSCoder *)decoder{
+    if(self = [super init]){
+        self.x = [decoder decodeIntForKey:@"positionX"];
+        self.y = [decoder decodeIntForKey:@"positionY"];
+    }
+    return self;
+}
+
+
 @end

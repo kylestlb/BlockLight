@@ -12,6 +12,10 @@
 
 @implementation Scene
 
+@synthesize name = _name; 
+@synthesize firstFrame = _firstFrame; 
+@synthesize lastFrame = _lastFrame; 
+
 -(id) init{
   
   self = [super init]; 
@@ -23,8 +27,19 @@
   
 }
 
-@synthesize name = _name; 
-@synthesize firstFrame = _firstFrame; 
-@synthesize lastFrame = _lastFrame; 
+- (void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeObject:_name forKey:@"sceneName"];
+    [encoder encodeObject:_firstFrame forKey:@"sceneFirstFrame"];
+    [encoder encodeObject:_lastFrame forKey:@"sceneLastFrame"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder{
+    if(self = [super init]){
+        self.name = [decoder decodeObjectForKey:@"sceneName"];
+        self.firstFrame = [decoder decodeObjectForKey:@"sceneFirstFrame"];
+        self.lastFrame = [decoder decodeObjectForKey:@"sceneLastFrame"];
+    }
+    return self;
+}
 
 @end

@@ -25,10 +25,11 @@ homeDetailViewController* _detailViewController;
   self.window.backgroundColor = [UIColor colorWithPatternImage:bg];
   
 	// setup data control
-	_userData = [[ userData alloc] init];
+	_userData = [[userData alloc] init];
 
 	//load user data - **hard coded right now**
     //got from AddGroupViewController
+	/*
     Group* group1 = [[Group alloc] init];
     group1.name = @"Group 1";
     group1.type = @"Some type";
@@ -61,7 +62,27 @@ homeDetailViewController* _detailViewController;
     group2.name = @"Group 2";
     group2.type = @"Some type";
     group2.uniqueID = _userData.nextUniqueGroupID;
-    [_userData.groups addObject:group2];  
+	[_userData.groups addObject:group2];
+	*/
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *filePath = [NSString stringWithFormat:@"%@/userData.plist", docDir];
+    printf("%s\n", [filePath UTF8String]);
+    if([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
+        printf("loading file");
+        NSMutableArray *arrayFromDisk = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+        _userData.groups = [arrayFromDisk valueForKey:@"_groups"];
+        _userData.uniqueGroupID = [arrayFromDisk valueForKey:@"_uniqueGroupID"];
+        _userData.uniquePerformerID = [arrayFromDisk valueForKey:@"_uniquePerformerID"];
+    } else {
+        printf("no saved file");
+        Group* group1 = [[Group alloc] init];
+        group1.name = @"Group 1";
+        group1.type = @"Some type";
+        group1.uniqueID = _userData.nextUniqueGroupID;
+        [_userData.groups addObject:group1];
+    }
   
   //Split View Controller setup below 
   
@@ -99,6 +120,7 @@ homeDetailViewController* _detailViewController;
    Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
    If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
    */
+	[self saveData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -122,6 +144,24 @@ homeDetailViewController* _detailViewController;
    Save data if appropriate.
    See also applicationDidEnterBackground:.
    */
+   [self saveData];
+}
+
+/* To save information in other places besides AppDelegate, use this:
+    AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate saveData];
+*/
+-(void)saveData{
+    NSMutableDictionary *saveDict = [[NSMutableDictionary alloc] init];
+    [saveDict setValue:_userData.groups forKey:@"_groups"];
+    [saveDict setValue:_userData.uniqueGroupID forKey:@"_uniqueGroupID"];
+    [saveDict setValue:_userData.uniquePerformerID forKey:@"_uniquePerformerID"];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentDirectory stringByAppendingPathComponent:@"userData.plist"];
+    
+    [NSKeyedArchiver archiveRootObject:saveDict toFile:filePath];
 }
 
 -(void)toggleSplitViewWithProduction:(Production*)production andGroup:(Group*)group{

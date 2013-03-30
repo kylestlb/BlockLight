@@ -20,8 +20,8 @@
 
 @property (strong) NSString* name;
 @property (strong) NSString* type;
+@property (strong) NSNumber* uniqueID; 
 @property (strong) NSMutableArray* performers;
 @property (strong) NSMutableArray* productions; 
-@property (strong) NSNumber* uniqueID; 
 
 @end

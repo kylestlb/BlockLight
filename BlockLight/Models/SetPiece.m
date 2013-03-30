@@ -12,6 +12,13 @@
 
 @implementation SetPiece
 
+@synthesize uniqueID = _uniqueID;
+@synthesize name = _name;
+
+@synthesize visible = _visible;
+@synthesize frameLocation =  _frameLocation;
+@synthesize icon = _icon;
+
 -(id) init{
   self = [super init]; 
   if(self == nil) 
@@ -21,11 +28,23 @@
   return self; 
 }
 
-@synthesize uniqueID = _uniqueID; 
-@synthesize name = _name; 
+- (void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeObject:_uniqueID forKey:@"setPieceID"];
+    [encoder encodeObject:_name forKey:@"setPieceName"];
+    [encoder encodeBool:_visible forKey:@"setPieceVisible"];
+    [encoder encodeObject:_frameLocation forKey:@"setPieceFrameLocation"];
+    [encoder encodeObject:UIImagePNGRepresentation(_icon) forKey:@"setPieceIcon"];
+}
 
-@synthesize visible = _visible; 
-@synthesize frameLocation =  _frameLocation; 
-@synthesize icon = _icon; 
+- (id)initWithCoder:(NSCoder *)decoder{
+    if(self = [super init]){
+        self.uniqueID = [decoder decodeObjectForKey:@"setPieceID"];
+        self.name = [decoder decodeObjectForKey:@"setPieceName"];
+        self.visible = [decoder decodeBoolForKey:@"setPieceVisible"];
+        self.frameLocation = [decoder decodeObjectForKey:@"setPieceFrameLocation"];
+        self.icon = [UIImage imageWithData:[decoder decodeObjectForKey:@"setPieceIcon"]];
+    }
+    return self;
+}
 
 @end
