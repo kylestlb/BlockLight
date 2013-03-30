@@ -43,7 +43,7 @@
         self.visible = [decoder decodeBoolForKey:@"setPieceVisible"];
         self.frameLocation = [decoder decodeObjectForKey:@"setPieceFrameLocation"];
         self.icon = [UIImage imageWithData:[decoder decodeObjectForKey:@"setPieceIcon"]];
-    }
+    } 
     return self;
 }
 

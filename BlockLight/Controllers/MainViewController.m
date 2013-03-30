@@ -553,7 +553,7 @@
             
           case 1:
             cell.textLabel.text = @"Layout Presets";
-            _layoutPresetFrame = cell.frame; 
+            _layoutPresetFrame = cell.frame;
             break;
             
           default:
@@ -571,15 +571,17 @@
             break;
             
           case 1:
-            cell.textLabel.text = @"Plants"; 
+            {cell.textLabel.text = @"Plants";
+                _layoutPresetFrame = cell.frame;
+            }
             break;
             
-          case 2: 
+          case 2:
             cell.textLabel.text = @"Stairs"; 
             break; 
           
           case 3:
-            cell.textLabel.text = @"Platforms"; 
+            cell.textLabel.text = @"Platforms";
             break; 
             
           case 4:
