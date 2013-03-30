@@ -45,4 +45,19 @@
   return  next;
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeObject:_groups forKey:@"groups"];
+    [encoder encodeObject:_uniqueGroupID forKey:@"groupID"];
+    [encoder encodeObject:_uniquePerformerID forKey:@"performerID"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder{
+    if(self = [super init]){
+        self.groups = [decoder decodeObjectForKey:@"groups"];
+        self.uniqueGroupID = [decoder decodeObjectForKey:@"groupID"];
+        self.uniquePerformerID = [decoder decodeObjectForKey:@"performerID"];
+    }
+    return self;
+}
+
 @end
