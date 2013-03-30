@@ -16,7 +16,8 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
   UINavigationController* _navController;
-  UINavigationController* _navControllerEdit; 
+  UINavigationController* _navControllerEdit;
+  DummyMainViewController* _dummymainViewController;
 	MainViewController* _mainViewController;
   userData* _userData;
 
@@ -24,7 +25,8 @@
 
 -(void)saveData;
 -(void)toggleSplitViewWithProduction:(Production*)production andGroup:(Group*)group;
--(void)toggleEditViewWithGroup:(Group*)group; 
+-(void)toggleEditViewWithGroup:(Group*)group;
+-(void)toggleSandboxView;
 
 @property (strong) UINavigationController* navController;
 @property (strong, nonatomic) UIWindow *window;

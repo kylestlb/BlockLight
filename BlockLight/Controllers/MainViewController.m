@@ -899,6 +899,8 @@
     Frame* newFrame = [[Frame alloc] init];
     [self contentView].noteLabel.text = @"";
     switch (buttonIndex) {
+	
+	//'CREATE NEW FRAME' BUTTON
       case 0:{
         Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame]; 
         Frame* newFrame = [[Frame alloc]init];
@@ -913,8 +915,9 @@
         [self saveIcon];
                 
       }
-        break;
+			break;
       case 1:{
+	  //'COPY PREVIOUS FRAME BUTTON
         Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame];
 
         for( Performer* p in _group.performers){
