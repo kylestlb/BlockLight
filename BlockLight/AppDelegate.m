@@ -181,18 +181,19 @@ homeDetailViewController* _detailViewController;
 }
 
 -(void)toggleSandboxView {
+	
 	[self.splitViewController.view removeFromSuperview];
+	
 	_dummymainViewController = [[DummyMainViewController alloc] init];
 	_dummymainViewController.view.frame = self.window.bounds;
 	
 	//MIGHT NEED LATER?
-
-//	_navControllerEdit = [[UINavigationController alloc] initWithRootViewController:_dummymainViewController];
-//	[_navControllerEdit.navigationBar setTintColor:[UIColor blackColor]];
-//	_navControllerEdit.toolbar.barStyle = UIBarStyleBlack;
-//	[self.window addSubview:_navControllerEdit.view];
-
-	self.window.rootViewController = _dummymainViewController;
+/*
+	_navControllerEdit = [[UINavigationController alloc] initWithRootViewController:_dummymainViewController];
+	[_navControllerEdit.navigationBar setTintColor:[UIColor blackColor]];
+	_navControllerEdit.toolbar.barStyle = UIBarStyleBlack;
+	[self.window addSubview:_navControllerEdit.view];
+	self.window.rootViewController = _dummymainViewController;*/
 	
 }
 
