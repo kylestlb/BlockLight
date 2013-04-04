@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "StageEditor.h"
+//connect to productions and Groups
+#import "Production.h"
+#import "Group.h"
+#import "MainViewController.h"
 
 @interface StageEditorController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
   UIPopoverController* _presetPopover; 
