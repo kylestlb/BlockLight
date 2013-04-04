@@ -17,6 +17,7 @@
 @synthesize performerPositions = _performerPositions;
 @synthesize performersOnStage = _performersOnStage; 
 @synthesize note = _note; 
+
 -(id)init{
   
   self = [super init];
@@ -31,4 +32,22 @@
   return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeObject:_frameIcon forKey:@"frameIcon"];
+    [encoder encodeObject:_spikePath forKey:@"frameSpikePath"];
+    [encoder encodeObject:_performersOnStage forKey:@"framePerformersOnStage"];
+    [encoder encodeObject:_performerPositions forKey:@"framePerformerPositions"];
+    [encoder encodeObject:_note forKey:@"frameNote"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder{
+    if(self = [super init]){
+        self.frameIcon = [decoder decodeObjectForKey:@"frameIcon"];
+        self.spikePath = [decoder decodeObjectForKey:@"frameSpikePath"];
+        self.performersOnStage = [decoder decodeObjectForKey:@"framePerformersOnStage"];
+        self.performerPositions = [decoder decodeObjectForKey:@"framePerformerPositions"];
+        self.note = [decoder decodeObjectForKey:@"frameNote"];
+    }
+    return self;
+}
 @end
