@@ -54,22 +54,22 @@
                                                                         target:self 
                                                                         action:nil];
   
-  UIBarButtonItem* back =  [[UIBarButtonItem alloc] initWithTitle:@"Back"
+  /*UIBarButtonItem* back =  [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                                                            style:UIBarButtonItemStyleBordered
                                                                           target:nil
-                                                                          action:nil];
+                                                                          action:nil];*/
   
-  self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:back, undo,redo, nil];
+  self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:/*back, */undo,redo, nil];
   
   // Top Right Buttons - appear on screen, but don't do anything
   UIBarButtonItem* cancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" 
                                                                 style:UIBarButtonItemStyleBordered 
                                                                target:self 
-                                                               action:nil]; 
+                                                               action:@selector(cancelInput)]; 
   
   UIBarButtonItem* save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
                                                                         target:self 
-                                                                        action:nil];  
+                                                                        action:@selector(showStage)];  
   save.tintColor = [UIColor blueColor]; 
   
   
@@ -139,5 +139,25 @@
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
   return @"Stage Name"; //need to have a different name for each preset stage
 }
+
+-(void)cancelInput{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)showStage{
+    /*StageEditor *stage;
+    Production *production;
+    production.name = stage.stageName.text;
+    production.stage.width = [NSNumber numberWithDouble:[stage.stageWidth.text doubleValue]];
+    production.stage.height = [NSNumber numberWithDouble:[stage.stageHeight.text doubleValue]];
+    Group *group;
+    group.name = stage.stageName.text;
+    
+    MainViewController* stages = [ [ MainViewController alloc] initWithProduction:production andGroup:group];
+    [self.navigationController pushViewController:stages animated:YES];*/
+    /*DummyMainViewController* newstage = [ [ DummyMainViewController alloc] init];
+     [self.navigationController pushViewController:newstage animated:YES];*/
+}
+
 
 @end
