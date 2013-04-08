@@ -156,9 +156,13 @@
       break;
       
     case 2:{
-      ContactsViewController* contactsViewController = [[ContactsViewController alloc] init];
-      AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-      [appDelegate.navController pushViewController:contactsViewController animated:YES];
+        AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        if([appDelegate.navController visibleViewController].title != @"Contacts")
+        {
+            ContactsViewController* contactsViewController = [[ContactsViewController alloc] init];
+            [appDelegate.navController pushViewController:contactsViewController animated:YES];
+        }
     }
 	break;
 	

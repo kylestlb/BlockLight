@@ -12,6 +12,7 @@
 
 homeMasterViewController* _masterViewController;
 homeDetailViewController* _detailViewController;
+GroupViewController * _groupViewController;
 
 @synthesize navController = _navController;
 @synthesize userData = _userData; 
@@ -29,7 +30,7 @@ homeDetailViewController* _detailViewController;
 
 	//load user data - **hard coded right now**
     //got from AddGroupViewController
-	/*
+	///*
     Group* group1 = [[Group alloc] init];
     group1.name = @"Group 1";
     group1.type = @"Some type";
@@ -63,7 +64,7 @@ homeDetailViewController* _detailViewController;
     group2.type = @"Some type";
     group2.uniqueID = _userData.nextUniqueGroupID;
 	[_userData.groups addObject:group2];
-	*/
+	//*/
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [paths objectAtIndex:0];
@@ -86,10 +87,15 @@ homeDetailViewController* _detailViewController;
   
   //Split View Controller setup below 
   
-  _detailViewController = [[homeDetailViewController alloc] init];
+  //_detailViewController = [[homeDetailViewController alloc] init];
   _masterViewController = [[homeMasterViewController alloc] init];
-  
-  _navController = [[UINavigationController alloc] initWithRootViewController:_detailViewController];
+    
+    // Jordan
+    _groupViewController = [[GroupViewController alloc] initWithGroup:group1 ];
+    
+    
+  //_navController = [[UINavigationController alloc] initWithRootViewController:_detailViewController];
+    _navController = [[UINavigationController alloc] initWithRootViewController:_groupViewController];
   [_navController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
   
   _splitViewController = [[UISplitViewController alloc] init];

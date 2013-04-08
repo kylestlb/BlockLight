@@ -9,18 +9,21 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "GroupViewCell.h"
-#import "homeMasterViewController.h" 
+#import "homeMasterViewController.h"
+#import "editProductionViewController.h"
 #import "AppDelegate.h"
 #import "Group.h"
 #import "AddPerformanceViewController.h"
-@interface GroupViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
-  Group* _group;
-  UIPopoverController* _addPerformancePopover;
-  UIButton* _createProduction;
-  UITableView* _performanceTable; 
+
+@interface GroupViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    Group* _group;
+    UIPopoverController* _addPerformancePopover;
+    UIButton* _createProduction;
+    UITableView* _performanceTable;
 }
 
-- (id)initWithGroup:(Group*)group; 
+- (id)initWithGroup:(Group*)group;
 - (void)createProduction;
 
 @end

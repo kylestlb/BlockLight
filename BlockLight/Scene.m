@@ -16,8 +16,8 @@
 @synthesize firstFrame = _firstFrame; 
 @synthesize lastFrame = _lastFrame; 
 
--(id) init{
-  
+-(id) init
+{
   self = [super init]; 
   
   if(self == nil) 
