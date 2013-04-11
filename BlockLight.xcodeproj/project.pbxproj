@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		452A9C5B1717285900E9549F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9C5A1717285900E9549F /* UIKit.framework */; };
+		452A9C5D1717285900E9549F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9C5C1717285900E9549F /* Foundation.framework */; };
+		452A9C5F1717285900E9549F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9C5E1717285900E9549F /* CoreGraphics.framework */; };
+		452A9C651717285900E9549F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 452A9C631717285900E9549F /* InfoPlist.strings */; };
+		452A9C671717285900E9549F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 452A9C661717285900E9549F /* main.m */; };
+		452A9C6B1717285900E9549F /* BlockLightAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452A9C6A1717285900E9549F /* BlockLightAppDelegate.m */; };
+		452A9C6D1717285900E9549F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A9C6C1717285900E9549F /* Default.png */; };
+		452A9C6F1717285900E9549F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A9C6E1717285900E9549F /* Default@2x.png */; };
+		452A9C711717285900E9549F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A9C701717285900E9549F /* Default-568h@2x.png */; };
+		452A9C741717285900E9549F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452A9C721717285900E9549F /* MainStoryboard.storyboard */; };
+		452A9C771717285900E9549F /* BlockLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452A9C761717285900E9549F /* BlockLightViewController.m */; };
+		452A9C7F1717285900E9549F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9C7E1717285900E9549F /* SenTestingKit.framework */; };
+		452A9C801717285900E9549F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9C5A1717285900E9549F /* UIKit.framework */; };
+		452A9C811717285900E9549F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9C5C1717285900E9549F /* Foundation.framework */; };
+		452A9C891717285900E9549F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 452A9C871717285900E9549F /* InfoPlist.strings */; };
+		452A9C8C1717285900E9549F /* BlockLightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 452A9C8B1717285900E9549F /* BlockLightTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		452A9C821717285900E9549F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 452A9C4D1717285800E9549F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 452A9C551717285900E9549F;
+			remoteInfo = BlockLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		452A9C561717285900E9549F /* BlockLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		452A9C5A1717285900E9549F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		452A9C5C1717285900E9549F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		452A9C5E1717285900E9549F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		452A9C621717285900E9549F /* BlockLight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockLight-Info.plist"; sourceTree = "<group>"; };
+		452A9C641717285900E9549F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		452A9C661717285900E9549F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		452A9C681717285900E9549F /* BlockLight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockLight-Prefix.pch"; sourceTree = "<group>"; };
+		452A9C691717285900E9549F /* BlockLightAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLightAppDelegate.h; sourceTree = "<group>"; };
+		452A9C6A1717285900E9549F /* BlockLightAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLightAppDelegate.m; sourceTree = "<group>"; };
+		452A9C6C1717285900E9549F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		452A9C6E1717285900E9549F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		452A9C701717285900E9549F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		452A9C731717285900E9549F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		452A9C751717285900E9549F /* BlockLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLightViewController.h; sourceTree = "<group>"; };
+		452A9C761717285900E9549F /* BlockLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLightViewController.m; sourceTree = "<group>"; };
+		452A9C7D1717285900E9549F /* BlockLightTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockLightTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		452A9C7E1717285900E9549F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		452A9C861717285900E9549F /* BlockLightTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockLightTests-Info.plist"; sourceTree = "<group>"; };
+		452A9C881717285900E9549F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		452A9C8A1717285900E9549F /* BlockLightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLightTests.h; sourceTree = "<group>"; };
+		452A9C8B1717285900E9549F /* BlockLightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLightTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		452A9C531717285900E9549F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A9C5B1717285900E9549F /* UIKit.framework in Frameworks */,
+				452A9C5D1717285900E9549F /* Foundation.framework in Frameworks */,
+				452A9C5F1717285900E9549F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452A9C791717285900E9549F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A9C7F1717285900E9549F /* SenTestingKit.framework in Frameworks */,
+				452A9C801717285900E9549F /* UIKit.framework in Frameworks */,
+				452A9C811717285900E9549F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		452A9C4B1717285800E9549F = {
+			isa = PBXGroup;
+			children = (
+				452A9C601717285900E9549F /* BlockLight */,
+				452A9C841717285900E9549F /* BlockLightTests */,
+				452A9C591717285900E9549F /* Frameworks */,
+				452A9C571717285900E9549F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		452A9C571717285900E9549F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				452A9C561717285900E9549F /* BlockLight.app */,
+				452A9C7D1717285900E9549F /* BlockLightTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		452A9C591717285900E9549F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452A9C5A1717285900E9549F /* UIKit.framework */,
+				452A9C5C1717285900E9549F /* Foundation.framework */,
+				452A9C5E1717285900E9549F /* CoreGraphics.framework */,
+				452A9C7E1717285900E9549F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		452A9C601717285900E9549F /* BlockLight */ = {
+			isa = PBXGroup;
+			children = (
+				452A9C691717285900E9549F /* BlockLightAppDelegate.h */,
+				452A9C6A1717285900E9549F /* BlockLightAppDelegate.m */,
+				452A9C721717285900E9549F /* MainStoryboard.storyboard */,
+				452A9C751717285900E9549F /* BlockLightViewController.h */,
+				452A9C761717285900E9549F /* BlockLightViewController.m */,
+				452A9C611717285900E9549F /* Supporting Files */,
+			);
+			path = BlockLight;
+			sourceTree = "<group>";
+		};
+		452A9C611717285900E9549F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				452A9C621717285900E9549F /* BlockLight-Info.plist */,
+				452A9C631717285900E9549F /* InfoPlist.strings */,
+				452A9C661717285900E9549F /* main.m */,
+				452A9C681717285900E9549F /* BlockLight-Prefix.pch */,
+				452A9C6C1717285900E9549F /* Default.png */,
+				452A9C6E1717285900E9549F /* Default@2x.png */,
+				452A9C701717285900E9549F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		452A9C841717285900E9549F /* BlockLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				452A9C8A1717285900E9549F /* BlockLightTests.h */,
+				452A9C8B1717285900E9549F /* BlockLightTests.m */,
+				452A9C851717285900E9549F /* Supporting Files */,
+			);
+			path = BlockLightTests;
+			sourceTree = "<group>";
+		};
+		452A9C851717285900E9549F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				452A9C861717285900E9549F /* BlockLightTests-Info.plist */,
+				452A9C871717285900E9549F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		452A9C551717285900E9549F /* BlockLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452A9C8F1717285900E9549F /* Build configuration list for PBXNativeTarget "BlockLight" */;
+			buildPhases = (
+				452A9C521717285900E9549F /* Sources */,
+				452A9C531717285900E9549F /* Frameworks */,
+				452A9C541717285900E9549F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockLight;
+			productName = BlockLight;
+			productReference = 452A9C561717285900E9549F /* BlockLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		452A9C7C1717285900E9549F /* BlockLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452A9C921717285900E9549F /* Build configuration list for PBXNativeTarget "BlockLightTests" */;
+			buildPhases = (
+				452A9C781717285900E9549F /* Sources */,
+				452A9C791717285900E9549F /* Frameworks */,
+				452A9C7A1717285900E9549F /* Resources */,
+				452A9C7B1717285900E9549F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				452A9C831717285900E9549F /* PBXTargetDependency */,
+			);
+			name = BlockLightTests;
+			productName = BlockLightTests;
+			productReference = 452A9C7D1717285900E9549F /* BlockLightTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		452A9C4D1717285800E9549F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BlockLight;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = bcbooth;
+			};
+			buildConfigurationList = 452A9C501717285800E9549F /* Build configuration list for PBXProject "BlockLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 452A9C4B1717285800E9549F;
+			productRefGroup = 452A9C571717285900E9549F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				452A9C551717285900E9549F /* BlockLight */,
+				452A9C7C1717285900E9549F /* BlockLightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		452A9C541717285900E9549F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A9C651717285900E9549F /* InfoPlist.strings in Resources */,
+				452A9C6D1717285900E9549F /* Default.png in Resources */,
+				452A9C6F1717285900E9549F /* Default@2x.png in Resources */,
+				452A9C711717285900E9549F /* Default-568h@2x.png in Resources */,
+				452A9C741717285900E9549F /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452A9C7A1717285900E9549F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A9C891717285900E9549F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		452A9C7B1717285900E9549F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		452A9C521717285900E9549F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A9C671717285900E9549F /* main.m in Sources */,
+				452A9C6B1717285900E9549F /* BlockLightAppDelegate.m in Sources */,
+				452A9C771717285900E9549F /* BlockLightViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452A9C781717285900E9549F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A9C8C1717285900E9549F /* BlockLightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		452A9C831717285900E9549F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 452A9C551717285900E9549F /* BlockLight */;
+			targetProxy = 452A9C821717285900E9549F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		452A9C631717285900E9549F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452A9C641717285900E9549F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		452A9C721717285900E9549F /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452A9C731717285900E9549F /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		452A9C871717285900E9549F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452A9C881717285900E9549F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		452A9C8D1717285900E9549F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		452A9C8E1717285900E9549F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		452A9C901717285900E9549F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockLight/BlockLight-Prefix.pch";
+				INFOPLIST_FILE = "BlockLight/BlockLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		452A9C911717285900E9549F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockLight/BlockLight-Prefix.pch";
+				INFOPLIST_FILE = "BlockLight/BlockLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		452A9C931717285900E9549F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlockLight.app/BlockLight";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockLight/BlockLight-Prefix.pch";
+				INFOPLIST_FILE = "BlockLightTests/BlockLightTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		452A9C941717285900E9549F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlockLight.app/BlockLight";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockLight/BlockLight-Prefix.pch";
+				INFOPLIST_FILE = "BlockLightTests/BlockLightTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		452A9C501717285800E9549F /* Build configuration list for PBXProject "BlockLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A9C8D1717285900E9549F /* Debug */,
+				452A9C8E1717285900E9549F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		452A9C8F1717285900E9549F /* Build configuration list for PBXNativeTarget "BlockLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A9C901717285900E9549F /* Debug */,
+				452A9C911717285900E9549F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		452A9C921717285900E9549F /* Build configuration list for PBXNativeTarget "BlockLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A9C931717285900E9549F /* Debug */,
+				452A9C941717285900E9549F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 452A9C4D1717285800E9549F /* Project object */;
+}
