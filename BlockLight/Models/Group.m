@@ -13,7 +13,6 @@
 @implementation Group
 
 @synthesize name = _name;
-@synthesize type = _type; //what is this?
 @synthesize uniqueID = _uniqueID;
 @synthesize performers = _performers; 
 @synthesize productions = _productions;
@@ -32,7 +31,6 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder{
     [encoder encodeObject:_name forKey:@"groupName"];
-    [encoder encodeObject:_type forKey:@"groupType"];
     [encoder encodeObject:_uniqueID forKey:@"groupID"];
     [encoder encodeObject:_performers forKey:@"groupPerformers"];
     [encoder encodeObject:_productions forKey:@"groupProductions"];
@@ -41,7 +39,6 @@
 - (id)initWithCoder:(NSCoder *)decoder{
     if(self = [super init]){
         self.name = [decoder decodeObjectForKey:@"groupName"];
-        self.type = [decoder decodeObjectForKey:@"groupType"];
         self.uniqueID = [decoder decodeObjectForKey:@"groupID"];
         self.performers = [decoder decodeObjectForKey:@"groupPerformers"];
         self.productions = [decoder decodeObjectForKey:@"groupProductions"];

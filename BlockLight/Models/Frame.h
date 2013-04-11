@@ -9,18 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface Frame : NSObject{
-  UIImage* _frameIcon;
-  UIBezierPath* _spikePath;
-  NSMutableArray* _performersOnStage;
-  NSMutableDictionary* _performerPositions;
-  NSString* _note;
-  BOOL _notePresent; 
+    UIImage* _frameIcon;
+    UIBezierPath* _spikePath;
+    NSMutableArray* _actorsOnStage;
+    NSMutableArray* _setPieces;
+    NSMutableArray* _notes;
+    BOOL _notesPresent; //show or hide notes
 }
 
 @property (strong) UIImage* frameIcon;
 @property (strong) UIBezierPath* spikePath;
-@property (strong) NSMutableArray* performersOnStage;
-@property (strong) NSMutableDictionary* performerPositions;
-@property (strong) NSString* note;
+@property (strong) NSMutableArray* actorsOnStage;
+@property (strong) NSMutableArray* setPieces;
+@property (strong) NSMutableArray* notes;
+@property BOOL notesPresent;
 
 @end

@@ -10,16 +10,12 @@
 
 @interface Group : NSObject{
   NSString* _name;
-  NSString* _type;
   NSMutableArray* _performers;
   NSMutableArray* _productions; 
   NSNumber* _uniqueID;
-  
 }
 
-
 @property (strong) NSString* name;
-@property (strong) NSString* type;
 @property (strong) NSNumber* uniqueID; 
 @property (strong) NSMutableArray* performers;
 @property (strong) NSMutableArray* productions; 

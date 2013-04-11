@@ -10,34 +10,25 @@
 
 #import <Foundation/Foundation.h>
 #import "Stage.h"
+#import "Scene.h"
+
 @interface Production : NSObject{
-  
-  NSString* _name;
-  Stage* _stage; 
-  NSMutableArray* _scenes;
-  NSMutableArray* _performers; 
-  NSMutableArray* _setPieces; 
-  NSMutableArray* _notes;
-  NSString* _date;
-  NSString* _location;
-  NSString* _stageManager;
-  NSMutableArray* _frames; 
-  NSInteger  _numFrames;
-  NSInteger  _curFrame;
-  NSMutableDictionary* _layouts; 
+    NSString* _name;
+    Stage* _stage; 
+    NSMutableArray* _scenes;
+    NSInteger  _curScene;
+    NSString* _date;
+    NSString* _location;
+    NSString* _stageManager;
+    NSMutableDictionary* _layouts; 
 }
 
 @property (strong) NSString* name;
 @property (strong) Stage* stage; 
 @property (strong) NSMutableArray* scenes;
-@property (strong) NSMutableArray* performers; 
-@property (strong) NSMutableArray* setPieces; 
-@property (strong) NSMutableArray* notes;
+@property  NSInteger curScene;
 @property (strong) NSString* date;
 @property (strong) NSString* location;
 @property (strong) NSString* stageManager; 
-@property (strong) NSMutableArray* frames;  
-@property  NSInteger numFrames;
-@property  NSInteger curFrame; 
 @property (strong) NSMutableDictionary* layouts;
 @end

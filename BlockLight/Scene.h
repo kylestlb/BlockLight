@@ -11,16 +11,14 @@
 #import <Foundation/Foundation.h>
 
 @interface Scene : NSObject{
-  
-  // scene attributes 
-  NSString* _name; 
-  NSNumber* _firstFrame; 
-  NSNumber* _lastFrame; 
-  
+    // scene attributes 
+    NSString* _name; 
+    NSMutableArray* _frames;
+    NSNumber* _curFrame;
 }
 
 @property (strong) NSString* name; 
-@property (strong) NSNumber* firstFrame; 
-@property (strong) NSNumber* lastFrame; 
+@property (strong) NSMutableArray* frames;
+@property (strong) NSNumber* curFrame;
 
 @end
