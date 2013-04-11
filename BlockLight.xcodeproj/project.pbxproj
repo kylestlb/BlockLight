@@ -63,6 +63,7 @@
 		5757A4AF16D5EF14007D172C /* bg-bar-violet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5757A4AE16D5EF14007D172C /* bg-bar-violet.png */; };
 		865027D6170DC9F200B5B6E3 /* editProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D5170DC9F100B5B6E3 /* editProductionView.m */; };
 		865027D9170DD0B000B5B6E3 /* editProductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D8170DD0AF00B5B6E3 /* editProductionViewController.m */; };
+		86B4356F171738C8009BB3C4 /* TVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B4356E171738C8009BB3C4 /* TVNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +166,8 @@
 		865027D5170DC9F100B5B6E3 /* editProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editProductionView.m; sourceTree = "<group>"; };
 		865027D7170DD01E00B5B6E3 /* editProductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editProductionViewController.h; sourceTree = "<group>"; };
 		865027D8170DD0AF00B5B6E3 /* editProductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editProductionViewController.m; sourceTree = "<group>"; };
+		86B4356C1717388D009BB3C4 /* TVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationController.h; sourceTree = "<group>"; };
+		86B4356E171738C8009BB3C4 /* TVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +340,8 @@
 				571013BB16FA96AA00786F07 /* DummyMainViewController.m */,
 				865027D7170DD01E00B5B6E3 /* editProductionViewController.h */,
 				865027D8170DD0AF00B5B6E3 /* editProductionViewController.m */,
+				86B4356C1717388D009BB3C4 /* TVNavigationController.h */,
+				86B4356E171738C8009BB3C4 /* TVNavigationController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				571013BC16FA96AA00786F07 /* DummyMainViewController.m in Sources */,
 				865027D6170DC9F200B5B6E3 /* editProductionView.m in Sources */,
 				865027D9170DD0B000B5B6E3 /* editProductionViewController.m in Sources */,
+				86B4356F171738C8009BB3C4 /* TVNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

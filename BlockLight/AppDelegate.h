@@ -13,9 +13,10 @@
 #import "homeMasterViewController.h"
 #import "homeDetailViewController.h"
 #import "DummyMainViewController.h"
+#import "TVNavigationController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
-  UINavigationController* _navController;
+  TVNavigationController* _navController;
   UINavigationController* _navControllerEdit;
   DummyMainViewController* _dummymainViewController;
 	MainViewController* _mainViewController;
@@ -28,7 +29,7 @@
 -(void)toggleEditViewWithGroup:(Group*)group;
 -(void)toggleSandboxView;
 
-@property (strong) UINavigationController* navController;
+@property (strong) TVNavigationController* navController;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong) UISplitViewController *splitViewController;
 @property (strong) userData* userData; 

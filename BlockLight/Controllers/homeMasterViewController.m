@@ -60,7 +60,8 @@
   NSInteger rows = 0;
   switch (section) {
     case 0: //section zero is the left hand side table I believe
-      rows = 6;
+      //rows = 6; // for calendar
+          rows = 1;
       break;
       
     case 1:
@@ -103,7 +104,7 @@
     cell.backgroundView = [[UIImageView alloc] initWithImage:button];
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.text = @"Calendar";
+    cell.textLabel.text = @"Groups";
     
   }
   //we can turn these buttons into views for things we actually need e.g. set objects, users etc
@@ -112,7 +113,7 @@
     cell.backgroundView = [[UIImageView alloc] initWithImage:button];
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.text = @"Media"; 
+    cell.textLabel.text = @"Productions"; 
     
   }
   
@@ -140,45 +141,50 @@
 }
 
 // How to repsond to the row that got selected
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  //NSInteger row = [indexPath row];
-  NSInteger section = [indexPath section];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //NSInteger row = [indexPath row];
+    NSInteger section = [indexPath section];
   
-  switch (section) {
-    case 0:{
-      
+    AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    switch (section)
+    {
+    case 0: // calendar pressed
+    {
+        if([appDelegate.navController visibleViewController].title != @"Production Groups")
+        {
+            homeDetailViewController* detailViewController = [[homeDetailViewController alloc] init];
+            [appDelegate.navController setRootViewController:detailViewController];
+        }
     }
-      break;
-      
-    case 1:{
-      
+        break;
+    case 1: // Media pressed
+    {
+        if([appDelegate.navController visibleViewController].title != @"Productions")
+        {
+            GroupViewController* groupViewController = [[GroupViewController alloc] init];
+            [appDelegate.navController setRootViewController:groupViewController];
+        }
     }
-      break;
-      
-    case 2:{
-        AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        
+        break;
+    case 2: // Contacts pressed
+    {
         if([appDelegate.navController visibleViewController].title != @"Contacts")
         {
             ContactsViewController* contactsViewController = [[ContactsViewController alloc] init];
-            [appDelegate.navController pushViewController:contactsViewController animated:YES];
+            [appDelegate.navController setRootViewController:contactsViewController];
         }
     }
-	break;
-	
-	case 3:{
-			
-	AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-	[appDelegate toggleSandboxView];
-		
-				
+        break;
+	case 3:
+    {
+        //AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [appDelegate toggleSandboxView];
 	}
-	break;
-	  	
-      
+        break;
     default:
-      break;
-  }
+        break;
+    }
 }
 
 @end
