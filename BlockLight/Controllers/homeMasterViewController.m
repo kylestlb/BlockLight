@@ -50,37 +50,34 @@
 //self explanatory - number of buttons on table on left hand side.  need to delete/add more
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 4;   //changed this to 4 from 3
+  return 5;   //changed this to 5 from 3
 }
 
 //sets up table view to be called later
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  
-  NSInteger rows = 0;
-  switch (section) {
+    NSInteger rows = 0;
+    switch (section)
+    {
     case 0: //section zero is the left hand side table I believe
-      //rows = 6; // for calendar
-          rows = 1;
-      break;
-      
+        rows = 1; // was 6 for calendar
+        break;
     case 1:
-      rows = 1;
-      break;
-      
+        rows = 1;
+        break;
     case 2:
-      rows = 1;
-      break;
-      
+        rows = 1;
+        break;
 	case 3:
-      rows = 1;
-	  break;
-	  
+        rows = 1;
+        break;
+    case 4:
+        rows = 1;
+        break;
     default:
-      break;
-  }
-  
-  return rows;
+        break;
+    }
+    return rows;
 }
 
 // Customize the appearance of table view cells.
@@ -131,7 +128,14 @@
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.text = @"Quick Stage Blocking";
 	}
-
+ else if(section ==4 && row == 0){
+	 UIImage* button = [UIImage imageNamed:@"bg-bar-blue"];
+     cell.backgroundView = [[UIImageView alloc] initWithImage:button];
+     cell.backgroundColor = [UIColor clearColor];
+     cell.textLabel.textColor = [UIColor whiteColor];
+     cell.textLabel.text = @"Media";
+ }
+    
   return cell;
 }
 
@@ -181,6 +185,8 @@
         //AppDelegate* appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [appDelegate toggleSandboxView];
 	}
+        break;
+    case 4: // media pressed
         break;
     default:
         break;
