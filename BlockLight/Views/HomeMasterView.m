@@ -1,14 +1,14 @@
 //
-//  MasterView.m
+//  HomeMasterView.m
 //  BlockLight
 //
 //  Created by Barrett Ames on 8/16/12.
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
-#import "MasterView.h"
+#import "HomeMasterView.h"
 
-@implementation MasterView
+@implementation HomeMasterView
 
 - (id)initWithDelegate:(id)viewController
 {

@@ -49,7 +49,7 @@
 @synthesize spikeTape = _spikeTape;
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-// TODO this is in both Mainview drawRect and StageEditor drawRect which is bad practice, simplify to function
+// TODO this is in both Mainview drawRect and DimensionsView drawRect which is bad practice, simplify to function
 // that can be abstracted to make different shapes
 - (void)drawRect:(CGRect)rect
 {

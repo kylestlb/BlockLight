@@ -1,20 +1,20 @@
 //
-//  StageEditorController.m
+//  DimensionsViewController.m
 //  BlockLight
 //
 //  Created by Barrett Ames on 7/30/12.
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
-#import "StageEditorController.h"
+#import "DimensionsViewController.h"
 
-@implementation StageEditorController
+@implementation DimensionsViewController
 
 /** Note: clicking 'Edit Stage' button will cause app to slide to new window
 	Try to make edit options just pop up in current window **/
 #pragma mark Accessors
--(StageEditor*)contentView {
-  return (StageEditor*)self.view;
+-(DimensionsView*)contentView {
+  return (DimensionsView*)self.view;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,7 +29,7 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-  self.view = [[StageEditor alloc] init ]; 
+  self.view = [[DimensionsView alloc] init ];
 }
 
 
@@ -145,7 +145,7 @@
 }
 
 -(void)showStage{
-    /*StageEditor *stage;
+    /*DimensionsView *stage;
     Production *production;
     production.name = stage.stageName.text;
     production.stage.width = [NSNumber numberWithDouble:[stage.stageWidth.text doubleValue]];
@@ -153,7 +153,7 @@
     Group *group;
     group.name = stage.stageName.text;
     
-    MainViewController* stages = [ [ MainViewController alloc] initWithProduction:production andGroup:group];
+    MainStageViewController* stages = [ [ MainStageViewController alloc] initWithProduction:production andGroup:group];
     [self.navigationController pushViewController:stages animated:YES];*/
     /*DummyMainViewController* newstage = [ [ DummyMainViewController alloc] init];
      [self.navigationController pushViewController:newstage animated:YES];*/

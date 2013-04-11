@@ -1,5 +1,5 @@
 //
-//  MainViewController.m
+//  MainStageViewController.m
 //  BlockLight
 //
 //  NOTE: This needs to be refactored for several reasons, mostly due to the length creating an overly difficult file to navigate #pragmas may also
@@ -11,11 +11,11 @@
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
-#import "MainViewController.h"
-#import "MainView.h" 
+#import "MainStageViewController.h"
+#import "MainStageView.h" 
 #import "AppDelegate.h"
 
-@implementation MainViewController
+@implementation MainStageViewController
 
 @synthesize setPopover  = _setPopover;
 @synthesize viewPopover = _viewPopover;
@@ -41,8 +41,8 @@
 }
 #pragma mark Accessors
 
--(MainView*)contentView{
-  return (MainView*)self.view;
+-(MainStageView*)contentView{
+  return (MainStageView*)self.view;
 }
 - (void)didReceiveMemoryWarning
 {
@@ -58,7 +58,7 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
-  MainView* mainView = [[MainView alloc] initWithFrame:CGRectZero andViewController:self];
+  MainStageView* mainView = [[MainStageView alloc] initWithFrame:CGRectZero andViewController:self];
   self.view = mainView;
 }
 
@@ -194,7 +194,7 @@
 
 // Push stage editor view 
 -(void)showStageEditor{
-  StageEditorController* editor = [ [ StageEditorController alloc] init]; 
+  DimensionsViewController* editor = [ [ DimensionsViewController alloc] init]; 
   [self.navigationController pushViewController:editor animated:YES];
 }
 

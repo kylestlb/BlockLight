@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  MainStageViewController.h
 //  BlockLight
 //
 //  NOTE: This needs to be refactored for several reasons, mostly due to the length creating an overly difficult file to navigate #pragmas may also
@@ -12,7 +12,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StageEditorController.h"
+#import "DimensionsViewController.h"
 #import "GridTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Production.h"
@@ -24,7 +24,7 @@
 #import "NoteViewController.h"
 #import "TimeLineViewCell.h"
 
-@interface MainViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate, UITableViewDelegate, UIPopoverControllerDelegate,UITableViewDataSource,UIActionSheetDelegate,UIGestureRecognizerDelegate>{
+@interface MainStageViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate, UITableViewDelegate, UIPopoverControllerDelegate,UITableViewDataSource,UIActionSheetDelegate,UIGestureRecognizerDelegate>{
   UIPopoverController* _viewPopover; 
   UIPopoverController* _performerPopover; 
   UIPopoverController* _setPopover;

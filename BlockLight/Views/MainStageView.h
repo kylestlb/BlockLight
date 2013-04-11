@@ -1,5 +1,5 @@
 //
-//  MainView.h
+//  MainStageView.h
 //  BlockLight
 //
 //  Created by Barrett Ames on 7/26/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainView : UIView{
+@interface MainStageView : UIView{
   
   BOOL _horizontalGrid ; 
   BOOL _verticalGrid; 

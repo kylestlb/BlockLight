@@ -12,7 +12,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StageEditorController.h"
+#import "DimensionsViewController.h"
 #import "GridTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Production.h"

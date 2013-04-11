@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 //#import "RadialGloss.h"
-#import "MasterView.h"
+#import "HomeMasterView.h"
 #import "ContactsViewController.h"
-#import "homeDetailViewController.h"
+#import "GroupViewController.h"
 #import "AppDelegate.h"
 #import "DummyMainViewController.h"
 

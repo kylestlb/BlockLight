@@ -1,5 +1,5 @@
 //
-//  StageEditor.h
+//  DimensionsView.h
 //  BlockLight
 //
 //  Created by Barrett Ames on 7/30/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StageEditor : UIView{
+@interface DimensionsView : UIView{
   UIButton* _selectPreset; 
   UITextField* _stageName; 
   UITextField* _stageWidth;

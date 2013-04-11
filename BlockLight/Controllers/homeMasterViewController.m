@@ -22,7 +22,7 @@
   self = [super init];
   if (self) {
     
-    self.view = [[MasterView alloc] initWithDelegate:self];
+    self.view = [[HomeMasterView alloc] initWithDelegate:self];
 
   }
   return self;
@@ -157,7 +157,7 @@
     {
         if([appDelegate.navController visibleViewController].title != @"Production Groups")
         {
-            homeDetailViewController* detailViewController = [[homeDetailViewController alloc] init];
+            GroupViewController* detailViewController = [[GroupViewController alloc] init];
             [appDelegate.navController setRootViewController:detailViewController];
         }
     }
@@ -166,8 +166,8 @@
     {
         if([appDelegate.navController visibleViewController].title != @"Productions")
         {
-            GroupViewController* groupViewController = [[GroupViewController alloc] init];
-            [appDelegate.navController setRootViewController:groupViewController];
+            ProductionViewController* productionViewController = [[ProductionViewController alloc] init];
+            [appDelegate.navController setRootViewController:productionViewController];
         }
     }
         break;

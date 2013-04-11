@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "homeDetailViewCell.h"
+#import "GroupViewCell.h"
 #import "editProductionView.h"
 #import "AddMemberViewController.h"
 #import "performerCell.h"

@@ -208,7 +208,7 @@
 
 // Push stage editor view
 -(void)showStageEditor{
-	StageEditorController* editor = [ [ StageEditorController alloc] init];
+	DimensionsViewController* editor = [ [ DimensionsViewController alloc] init];
 	[self.navigationController pushViewController:editor animated:YES];
 }
 

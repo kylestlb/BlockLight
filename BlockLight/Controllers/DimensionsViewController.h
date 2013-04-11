@@ -1,5 +1,5 @@
 //
-//  StageEditorController.h
+//  DimensionsViewController.h
 //  BlockLight
 //
 //  Created by Barrett Ames on 7/30/12.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StageEditor.h"
+#import "DimensionsView.h"
 //connect to productions and Groups
 #import "Production.h"
 #import "Group.h"
-#import "MainViewController.h"
+#import "MainStageViewController.h"
 
-@interface StageEditorController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface DimensionsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
   UIPopoverController* _presetPopover; 
 }
 

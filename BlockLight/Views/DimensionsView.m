@@ -1,15 +1,15 @@
 //
-//  StageEditor.m
+//  DimensionsView.m
 //  BlockLight
 //
 //  Created by Barrett Ames on 7/30/12.
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
-#import "StageEditor.h"
+#import "DimensionsView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation StageEditor
+@implementation DimensionsView
 
 - (id)initWithFrame:(CGRect)frame
 {

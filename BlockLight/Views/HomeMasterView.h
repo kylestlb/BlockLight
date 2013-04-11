@@ -1,5 +1,5 @@
 //
-//  MasterView.h
+//  HomeMasterView.h
 //  BlockLight
 //
 //  Created by Barrett Ames on 8/16/12.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface MasterView : UIView{
+@interface HomeMasterView : UIView{
   
   UILabel* _block;
   UILabel* _light;

@@ -1,14 +1,14 @@
 //
-//  MainView.m
+//  MainStageView.m
 //  BlockLight
 //
 //  Created by Barrett Ames on 7/26/12.
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
-#import "MainView.h"
+#import "MainStageView.h"
 
-@implementation MainView
+@implementation MainStageView
 
 @synthesize noteLabel = _noteLabel; 
 #pragma mark Constructors
@@ -48,7 +48,7 @@
 @synthesize spikeTape = _spikeTape;
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-// TODO this is in both Mainview drawRect and StageEditor drawRect which is bad practice, simplify to function
+// TODO this is in both MainStageView drawRect and DimensionsView drawRect which is bad practice, simplify to function
 // that can be abstracted to make different shapes
 - (void)drawRect:(CGRect)rect
 {

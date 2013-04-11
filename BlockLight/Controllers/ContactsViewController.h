@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "homeDetailViewCell.h"
+#import "GroupViewCell.h"
 #import "ContactsView.h"
 #import "CreateGroupView.h"
 #import "AddGroupViewController.h"

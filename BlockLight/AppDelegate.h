@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainViewController.h"
+#import "MainStageViewController.h"
 #import "userData.h"
 #import "Production.h" 
 #import "homeMasterViewController.h"
-#import "homeDetailViewController.h"
+#import "GroupViewController.h"
 #import "DummyMainViewController.h"
 #import "TVNavigationController.h"
 
@@ -19,7 +19,7 @@
   TVNavigationController* _navController;
   UINavigationController* _navControllerEdit;
   DummyMainViewController* _dummymainViewController;
-	MainViewController* _mainViewController;
+	MainStageViewController* _mainStageViewController;
   userData* _userData;
 
 }

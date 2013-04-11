@@ -118,7 +118,7 @@ AppDelegate* _mainDelegate;
     
     static NSString *CellIdentifier = @"Cell2";
     
-    cell = [[homeDetailViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier andGroup:_filterGroup];
+    cell = [[GroupViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier andGroup:_filterGroup];
     cell.backgroundColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:.5];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

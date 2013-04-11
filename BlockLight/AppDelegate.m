@@ -11,8 +11,8 @@
 @implementation AppDelegate
 
 homeMasterViewController* _masterViewController;
-homeDetailViewController* _detailViewController;
-GroupViewController * _groupViewController;
+GroupViewController* _groupViewController;
+ProductionViewController * _productionViewController;
 
 @synthesize navController = _navController;
 @synthesize userData = _userData;
@@ -86,13 +86,14 @@ GroupViewController * _groupViewController;
     }
     
     //Split View Controller setup below
+    // starts off showing list of groups in detail view
     _masterViewController = [[homeMasterViewController alloc] init];
-    _detailViewController = [[homeDetailViewController alloc] init];
-    _navController = [[TVNavigationController alloc] initWithRootViewController:_detailViewController];
+    _groupViewController = [[GroupViewController alloc] init];
+    _navController = [[TVNavigationController alloc] initWithRootViewController:_groupViewController];
     [_navController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
   
     _splitViewController = [[UISplitViewController alloc] init];
-    _splitViewController.delegate =  _detailViewController;
+    _splitViewController.delegate =  _groupViewController;
     _splitViewController.viewControllers = @[_masterViewController, _navController];
     _splitViewController.view.backgroundColor = [UIColor clearColor];
     
@@ -164,11 +165,11 @@ GroupViewController * _groupViewController;
   [self.splitViewController.view removeFromSuperview];
   
   // Add the view controller's view to the window and display.
-  _mainViewController = [[MainViewController alloc] initWithProduction:production andGroup:group] ;
-  _mainViewController.view.frame = self.window.bounds;
+  _mainStageViewController = [[MainStageViewController alloc] initWithProduction:production andGroup:group] ;
+  _mainStageViewController.view.frame = self.window.bounds;
   
   //Nav Controller setup
-  _navControllerEdit = [[TVNavigationController alloc] initWithRootViewController:_mainViewController];
+  _navControllerEdit = [[TVNavigationController alloc] initWithRootViewController:_mainStageViewController];
   [_navControllerEdit.navigationBar setTintColor:[UIColor blackColor]];
   _navControllerEdit.toolbar.barStyle = UIBarStyleBlack;
   [self.window addSubview:_navControllerEdit.view];
@@ -197,15 +198,15 @@ GroupViewController * _groupViewController;
   [_navControllerEdit.view removeFromSuperview];
 
   
-  _navController = [[TVNavigationController alloc] initWithRootViewController:_detailViewController];
+  _navController = [[TVNavigationController alloc] initWithRootViewController:_groupViewController];
   [_navController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
   
   _splitViewController.viewControllers = @[_masterViewController, _navController];
   
   self.window.rootViewController = self.splitViewController;
 
-  GroupViewController * groupViewController = [[GroupViewController alloc] initWithGroup:group ];
-  [_navController pushViewController:groupViewController animated:NO];
+  ProductionViewController * productionViewController = [[ProductionViewController alloc] initWithGroup:group ];
+  [_navController pushViewController:productionViewController animated:NO];
 }
 
 

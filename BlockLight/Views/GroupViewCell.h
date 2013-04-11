@@ -2,16 +2,15 @@
 //  GroupViewCell.h
 //  BlockLight
 //
-//  Created by Barrett Ames on 8/15/12.
+//  Created by Barrett Ames on 8/11/12.
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import "Production.h"
+#import "Group.h"
 
 @interface GroupViewCell : UITableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier andViewController:(id)viewController andProduction:(Production*)production andRow:(NSInteger)row; 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier andGroup:(Group*)group; 
 
 @end
