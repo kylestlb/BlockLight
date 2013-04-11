@@ -28,12 +28,10 @@
   _uniqueGroupID = [NSNumber numberWithInt:0];
   _groups = [[NSMutableArray alloc] initWithCapacity:5]; 
   
-  
   return self;
 }
 
 -(NSNumber*)nextUniqueGroupID{
-  
   NSNumber* next = [NSNumber numberWithInt:_uniqueGroupID.intValue +1];
   _uniqueGroupID = next; 
   return  next;

@@ -61,6 +61,8 @@
 		571013B516FA45AF00786F07 /* DummyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013B416FA45AF00786F07 /* DummyMainView.m */; };
 		571013BC16FA96AA00786F07 /* DummyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013BB16FA96AA00786F07 /* DummyMainViewController.m */; };
 		5757A4AF16D5EF14007D172C /* bg-bar-violet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5757A4AE16D5EF14007D172C /* bg-bar-violet.png */; };
+		8BB4A62717173EB600B409E8 /* Actor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4A62617173EB600B409E8 /* Actor.m */; };
+		8BB4A62A1717421000B409E8 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4A6291717421000B409E8 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +161,10 @@
 		571013BA16FA96AA00786F07 /* DummyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyMainViewController.h; sourceTree = "<group>"; };
 		571013BB16FA96AA00786F07 /* DummyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyMainViewController.m; sourceTree = "<group>"; };
 		5757A4AE16D5EF14007D172C /* bg-bar-violet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-bar-violet.png"; sourceTree = "<group>"; };
+		8BB4A62517173EB600B409E8 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		8BB4A62617173EB600B409E8 /* Actor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actor.m; sourceTree = "<group>"; };
+		8BB4A6281717420F00B409E8 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		8BB4A6291717421000B409E8 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,24 +239,28 @@
 		40A656F315C1BEF800DEC2ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40A656ED15C1BD3B00DEC2ED /* Production.h */,
-				40A656EE15C1BD3B00DEC2ED /* Production.m */,
-				40A656F715C1BF4900DEC2ED /* SetPiece.h */,
-				40A656F815C1BF4900DEC2ED /* SetPiece.m */,
-				40A656FA15C1BF5C00DEC2ED /* Performer.h */,
-				40A656FB15C1BF5C00DEC2ED /* Performer.m */,
-				4073FC3C15EC7ACD00E1A96D /* Group.h */,
-				4073FC3D15EC7ACD00E1A96D /* Group.m */,
-				40A6570215C1D52D00DEC2ED /* Stage.h */,
-				40A6570315C1D52E00DEC2ED /* Stage.m */,
-				40A656F015C1BEE600DEC2ED /* Scene.h */,
-				40A656F115C1BEE600DEC2ED /* Scene.m */,
-				4073FC4015EC7D4500E1A96D /* userData.h */,
-				4073FC4115EC7D4500E1A96D /* userData.m */,
+				8BB4A62517173EB600B409E8 /* Actor.h */,
+				8BB4A62617173EB600B409E8 /* Actor.m */,
 				4088CA5A15EF233500163B66 /* Frame.h */,
 				4088CA5B15EF233500163B66 /* Frame.m */,
+				4073FC3C15EC7ACD00E1A96D /* Group.h */,
+				4073FC3D15EC7ACD00E1A96D /* Group.m */,
+				8BB4A6281717420F00B409E8 /* Note.h */,
+				8BB4A6291717421000B409E8 /* Note.m */,
+				40A656FA15C1BF5C00DEC2ED /* Performer.h */,
+				40A656FB15C1BF5C00DEC2ED /* Performer.m */,
 				4088CA6015F00B3400163B66 /* Position.h */,
 				4088CA6115F00B3400163B66 /* Position.m */,
+				40A656ED15C1BD3B00DEC2ED /* Production.h */,
+				40A656EE15C1BD3B00DEC2ED /* Production.m */,
+				40A656F015C1BEE600DEC2ED /* Scene.h */,
+				40A656F115C1BEE600DEC2ED /* Scene.m */,
+				40A656F715C1BF4900DEC2ED /* SetPiece.h */,
+				40A656F815C1BF4900DEC2ED /* SetPiece.m */,
+				40A6570215C1D52D00DEC2ED /* Stage.h */,
+				40A6570315C1D52E00DEC2ED /* Stage.m */,
+				4073FC4015EC7D4500E1A96D /* userData.h */,
+				4073FC4115EC7D4500E1A96D /* userData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -460,6 +470,8 @@
 				4088CA6B15F588FF00163B66 /* TimeLineViewCell.m in Sources */,
 				571013B516FA45AF00786F07 /* DummyMainView.m in Sources */,
 				571013BC16FA96AA00786F07 /* DummyMainViewController.m in Sources */,
+				8BB4A62717173EB600B409E8 /* Actor.m in Sources */,
+				8BB4A62A1717421000B409E8 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

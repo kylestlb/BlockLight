@@ -63,7 +63,6 @@
   
   Group* newGroup = [[Group alloc] init];
   newGroup.name = [self contentView].name.text;
-  newGroup.type = [self contentView].type.text; 
   newGroup.uniqueID = mainDelegate.userData.nextUniqueGroupID;
   [mainDelegate.userData.groups addObject:newGroup];
   
