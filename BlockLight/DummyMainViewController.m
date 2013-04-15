@@ -67,9 +67,15 @@
 	_production = [[Production alloc] init];
 	_group = [[Group alloc] init];
 	
-	if ([_production.frames count] == 0) {
-		[_production.frames addObject:[[Frame alloc]init] ];
+	Scene* current = [[Scene alloc] init];
+	if ([current.frames count] == 0) {
+		[current.frames addObject:[[Frame alloc]init] ];
 	}
+	
+	if ([_production.scenes count] == 0) {
+		[_production.scenes addObject:current];
+	}
+
 	
 	
 }
@@ -163,7 +169,8 @@
 	_timeline.backgroundColor = [UIColor lightTextColor];
 	
 	// Selects the current frame in the time line
-	NSIndexPath *ip=[NSIndexPath indexPathForRow:_production.curFrame inSection:0]; //need to find where curFrame is defined and edit
+	Scene* current = [_production.scenes objectAtIndex:0];
+	NSIndexPath *ip=[NSIndexPath indexPathForRow:current.curFrame inSection:0]; //need to find where curFrame is defined and edit
 	[_timeline selectRowAtIndexPath:ip animated:NO scrollPosition:UITableViewScrollPositionBottom];
 	
 	// Creating the Production options button
@@ -222,7 +229,8 @@
 -(void) addNote{
 	//NOTE: Resizes when text entering pops up, might consider decreasing size of popover
 	
-	NoteViewController* noteViewController = [[NoteViewController alloc] initWithFrame:[_production.frames objectAtIndex:_production.curFrame]];
+	Scene* current = [_production.scenes objectAtIndex:0];
+	NoteViewController* noteViewController = [[NoteViewController alloc] initWithFrame:[current.frames objectAtIndex:current.curFrame]];
 	noteViewController.title = @"Notes";
 	
 	_noteNav = [[UINavigationController alloc] initWithRootViewController:noteViewController];
@@ -239,9 +247,10 @@
 
 //Used to add note to stage when the note popover is dismissed
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
-	
+	// TODO: Adding notes to screen from frame needs to be fixed here.
 	if ([popoverController isEqual:_notesPopover]) {
-		Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame];
+		Scene* current = [_production.scenes objectAtIndex:0];
+		Frame* curFrame = [current.frames objectAtIndex:current.curFrame];
 		[self contentView].noteLabel.text = curFrame.note;
 		UIPanGestureRecognizer * noteMover = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureMoveAround:)];
 		[noteMover setDelegate:self];
