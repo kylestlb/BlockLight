@@ -33,8 +33,10 @@
   _production = production;
   self.title = production.name;
 
-  if ([production.frames count] == 0) {
-    [production.frames addObject:[[Frame alloc]init] ]; 
+    Scene *scene;
+    scene = [production.scenes objectAtIndex:0];
+    if ([scene.frames count] == 0) {
+    [scene.frames addObject:[[Frame alloc]init] ];
   }
   
   return self;
@@ -148,8 +150,10 @@
   _timeline.backgroundView = [[UIView alloc] init] ; 
   _timeline.backgroundColor = [UIColor lightTextColor];
   
-  // Selects the current frame in the time line 
-  NSIndexPath *ip=[NSIndexPath indexPathForRow:_production.curFrame inSection:0]; //need to find where curFrame is defined and edit
+  // Selects the current frame in the time line
+    Scene *scene;
+    scene = [_production.scenes objectAtIndex:0];
+  NSIndexPath *ip=[NSIndexPath indexPathForRow:scene.curFrame inSection:0]; //need to find where curFrame is defined and edit
   [_timeline selectRowAtIndexPath:ip animated:NO scrollPosition:UITableViewScrollPositionBottom];
   
   // Creating the Production options button  
@@ -208,7 +212,9 @@
 -(void) addNote{
   //NOTE: Resizes when text entering pops up, might consider decreasing size of popover
   
-  NoteViewController* noteViewController = [[NoteViewController alloc] initWithFrame:[_production.frames objectAtIndex:_production.curFrame]];
+    Scene *scene;
+    scene = [_production.scenes objectAtIndex:0];
+  NoteViewController* noteViewController = [[NoteViewController alloc] initWithFrame:[scene.frames objectAtIndex:scene.curFrame]];
   noteViewController.title = @"Notes";
   
   _noteNav = [[UINavigationController alloc] initWithRootViewController:noteViewController];
@@ -227,8 +233,10 @@
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
   
   if ([popoverController isEqual:_notesPopover]) {
-    Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame]; 
-    [self contentView].noteLabel.text = curFrame.note;
+      Scene *scene;
+      scene = [_production.scenes objectAtIndex:0];
+    Frame* curFrame = [scene.frames objectAtIndex:scene.curFrame];
+      [self contentView].noteLabel.text = [curFrame.notes objectAtIndex:0];
     UIPanGestureRecognizer * noteMover = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureMoveAround:)];
     [noteMover setDelegate:self];
     [[self contentView].noteLabel setUserInteractionEnabled:YES]; 
@@ -488,11 +496,13 @@
   else if([tableView isEqual:_performerTable]){
     GridTableViewCell* gridCell;
     //need to look at frame object and edit if necessary? that's what is going to be saved on timeline
-    Frame* frame = [_production.frames objectAtIndex:_production.curFrame];
+      Scene *scene;
+      scene = [_production.scenes objectAtIndex:0];
+    Frame* frame = [scene.frames objectAtIndex:scene.curFrame];
     gridCell = [[GridTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"gridReuse"];
 
     // Number of people not on the stage.
-    NSInteger benchwarmers = [_group.performers count] - [frame.performersOnStage count];
+    NSInteger benchwarmers = [_group.performers count] - [frame.actorsOnStage count];
     
     // The following statements determine which grid cells should filled. 
     if(row*3 < benchwarmers){
@@ -605,7 +615,9 @@
   // Table for timeline 
   else if([tableView isEqual: _timeline]){
     cell =   [[TimeLineViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"reuse"];
-    Frame* frame= [_production.frames objectAtIndex:indexPath.row];
+      Scene *scene;
+      scene = [_production.scenes objectAtIndex:0];
+    Frame* frame= [scene.frames objectAtIndex:indexPath.row];
     cell.backgroundColor = [ UIColor colorWithPatternImage:frame.frameIcon];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
@@ -635,7 +647,9 @@
   NSInteger rows =0; 
   
   if([tableView isEqual: _timeline]){
-    rows = [_production.frames count];
+      Scene *scene;
+      scene = [_production.scenes objectAtIndex:0];
+    rows = [scene.frames count];
   }
   
  else  if([tableView isEqual:_viewTable]){
@@ -656,9 +670,10 @@
   }
   
   else if( [tableView isEqual:_performerTable]){
-    
-    Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame];
-    float benchwarmers = [_group.performers count] - [curFrame.performersOnStage count]; 
+      Scene *scene;
+      scene = [_production.scenes objectAtIndex:0];
+    Frame* curFrame = [scene.frames objectAtIndex:scene.curFrame];
+    float benchwarmers = [_group.performers count] - [curFrame.actorsOnStage count];
     rows = ceil(benchwarmers/3.0f);
   }
   
@@ -816,17 +831,21 @@
   //this is all of the timeline logic.
   
   else if( [tableView isEqual:_timeline]){
-    _production.curFrame = indexPath.row;
-    Frame* frame = [_production.frames objectAtIndex:indexPath.row];
+      Scene *scene;
+      scene = [_production.scenes objectAtIndex:0];
+    //scene.curFrame = indexPath.row;
+    Frame* frame = [scene.frames objectAtIndex:indexPath.row];
     
 	//puts performers in their positions
     for( Performer* p in _group.performers){
       NSString* key = [NSString stringWithFormat:@"%d",p.uniqueID.intValue];
-      Position* pos = [frame.performerPositions objectForKey:key];
+        Actor *actor;
+        actor = [frame.actorsOnStage objectAtIndex:0];
+      Position* pos = actor.actorPosition;
       
       if(pos != nil){
         [ [[UIApplication sharedApplication] keyWindow] addSubview:p.view ]; //adds sep view per performer?
-        [p.view setCenter:CGPointMake(pos.x, pos.y)];
+        [p.view setCenter:CGPointMake([pos.xCoordinate floatValue], [pos.yCoordinate floatValue])];
         [p.view setNeedsDisplay]; 
       }
       else{
@@ -836,7 +855,7 @@
       }
     }
     
-    [self contentView].noteLabel.text =frame.note;
+    [self contentView].noteLabel.text = [frame.notes objectAtIndex:0];
     CGRect locationFrame = [self contentView].noteLabel.frame ;
     [self contentView].noteLabel.frame = CGRectMake(locationFrame.origin.x, locationFrame.origin.y, 150, 50); 
     [[self contentView].noteLabel sizeToFit]; 
@@ -902,14 +921,17 @@
 	
 	//'CREATE NEW FRAME' BUTTON
       case 0:{
-        Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame]; 
+          Scene *scene;
+          scene = [_production.scenes objectAtIndex:0];
+
+        Frame* curFrame = [scene.frames objectAtIndex:scene.curFrame];
         Frame* newFrame = [[Frame alloc]init];
         newFrame.spikePath = [UIBezierPath bezierPathWithCGPath:curFrame.spikePath.CGPath];
         newFrame.spikePath.lineCapStyle = kCGLineCapRound;
         newFrame.spikePath.miterLimit = 0;
         newFrame.spikePath.lineWidth =5 ; 
-        _production.curFrame = _production.curFrame +1;
-        [_production.frames insertObject:newFrame atIndex:_production.curFrame ];
+          scene.curFrame = [NSNumber numberWithInt:([scene.curFrame intValue] +1)];
+        [scene.frames insertObject:newFrame atIndex:scene.curFrame ];
         [self contentView].myPath = newFrame.spikePath; 
         [[[UIApplication sharedApplication] keyWindow]  setNeedsDisplay]; 
         [self saveIcon];
@@ -918,11 +940,16 @@
 			break;
       case 1:{
 	  //'COPY PREVIOUS FRAME BUTTON
-        Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame];
+          Scene *scene;
+          scene = [_production.scenes objectAtIndex:0];
+
+        Frame* curFrame = [scene.frames objectAtIndex:scene.curFrame];
 
         for( Performer* p in _group.performers){
           NSString* key = [NSString stringWithFormat:@"%d",p.uniqueID.intValue];
-          Position* pos = [curFrame.performerPositions objectForKey:key];
+            Actor *actor;
+            actor = [curFrame.actorsOnStage objectAtIndex:0];
+            Position* pos = actor.actorPosition;
           
           if(pos != nil){
             [p.view removeFromSuperview];
@@ -934,8 +961,8 @@
         [self contentView].myPath.miterLimit=0;
         [self contentView].myPath.lineWidth=5;
 
-        _production.curFrame = _production.curFrame +1;
-        [_production.frames insertObject:newFrame atIndex:_production.curFrame ];
+          scene.curFrame = [NSNumber numberWithInt:([scene.curFrame intValue] + 1)];
+        [scene.frames insertObject:newFrame atIndex:scene.curFrame ];
         [[[UIApplication sharedApplication] keyWindow]  setNeedsDisplay];
         [self saveIcon];
       }
@@ -1029,20 +1056,25 @@
       Performer * performer = (Performer*) gesture;
     
     NSString* key = [NSString stringWithFormat:@"%d",performer.uniqueID.intValue];
-    Frame* frame = [_production.frames objectAtIndex:_production.curFrame];
-    Position* pos =  [frame.performerPositions objectForKey:key];
+        Scene *scene;
+        scene = [_production.scenes objectAtIndex:0];
+
+    Frame* frame = [scene.frames objectAtIndex:scene.curFrame];
+        Actor *actor;
+        actor = [frame.actorsOnStage objectAtIndex:0];
+        Position* pos = actor.actorPosition;
     if( pos == nil){
       pos = [[Position alloc] init];
-      pos.x = [piece center].x;
-      pos.y = [piece center].y;
+      pos.xCoordinate = [NSNumber numberWithFloat:[piece center].x];
+      pos.yCoordinate = [NSNumber numberWithFloat:[piece center].y];
       
-      [frame.performerPositions setValue:pos forKey:key];
-     if( ![frame.performersOnStage containsObject:performer])
-       [frame.performersOnStage addObject:performer];
+  //    [frame.performerPositions setValue:pos forKey:key];
+    // if( ![frame.performersOnStage containsObject:performer])
+     //  [frame.performersOnStage addObject:performer];
     }
     else{
-      pos.x = [piece center].x;
-      pos.y = [piece center].y;
+        pos.xCoordinate = [NSNumber numberWithFloat:[piece center].x];
+        pos.yCoordinate = [NSNumber numberWithFloat:[piece center].y];
     }
    }
   }
@@ -1065,13 +1097,16 @@
   //Rotate to deal with horizontal scroll
   UIImage* rotImage = [self image:iconImage RotatedByDegrees:180.0f];
   
-  Frame* frame = [_production.frames objectAtIndex:_production.curFrame];
+    Scene *scene;
+    scene = [_production.scenes objectAtIndex:0];
+    
+  Frame* frame = [scene.frames objectAtIndex:scene.curFrame];
   
   frame.frameIcon = rotImage;
   frame.spikePath = [self contentView].myPath; 
   [_timeline reloadData];
   
-  NSIndexPath *ip=[NSIndexPath indexPathForRow:_production.curFrame inSection:0];
+  NSIndexPath *ip=[NSIndexPath indexPathForRow:scene.curFrame inSection:0];
   [_timeline selectRowAtIndexPath:ip animated:NO scrollPosition:UITableViewScrollPositionBottom];
 
 

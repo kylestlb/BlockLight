@@ -17,6 +17,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Production.h"
 #import "Group.h"
+#import "Scene.h"
+#import "Actor.h"
 #import "Frame.h"
 #define M_PI   3.14159265358979323846264338327950288 
 #define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
@@ -57,6 +59,7 @@
 }
 - (id)initWithProduction:(Production*)production andGroup:(Group*)group;
 - (void)productionOptionsAS;
+-(void)saveIcon;
 
 @property (strong) UIPopoverController* viewPopover;
 @property (strong) UIPopoverController* performerPopover;

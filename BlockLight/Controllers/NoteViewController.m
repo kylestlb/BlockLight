@@ -47,7 +47,7 @@
 }
 
 -(void)addNoteView{
-  _frame.note = [self contentView].noteInput.text;
+    [_frame.notes addObject: [self contentView].noteInput.text];
   [_popover dismissPopoverAnimated:NO];
   [_popover.delegate popoverControllerDidDismissPopover:_popover]; 
 }

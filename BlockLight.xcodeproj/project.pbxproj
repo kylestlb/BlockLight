@@ -22,16 +22,12 @@
 		4071F9ED15DE048900714075 /* bg-production.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4071F9EC15DE048900714075 /* bg-production.jpg */; };
 		4071F9F115DE066900714075 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4071F9F015DE066900714075 /* ContactsViewController.m */; };
 		4071F9F415DE068800714075 /* ContactsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4071F9F315DE068800714075 /* ContactsView.m */; };
-		4073FC3E15EC7ACD00E1A96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073FC3D15EC7ACD00E1A96D /* Group.m */; };
-		4073FC4215EC7D4500E1A96D /* userData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073FC4115EC7D4500E1A96D /* userData.m */; };
 		4073FC4515ED8A3400E1A96D /* performerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073FC4415ED8A3400E1A96D /* performerCell.m */; };
 		4073FC4815EEC34300E1A96D /* CreatePerformance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073FC4715EEC34300E1A96D /* CreatePerformance.m */; };
 		4073FC4B15EEC36A00E1A96D /* AddPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073FC4A15EEC36900E1A96D /* AddPerformanceViewController.m */; };
 		407677FA15D0794100057063 /* RadialGloss.m in Sources */ = {isa = PBXBuildFile; fileRef = 407677F915D0794100057063 /* RadialGloss.m */; };
 		4076781415D6D6E700057063 /* GroupViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4076781315D6D6E700057063 /* GroupViewCell.m */; };
-		4088CA5C15EF233500163B66 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4088CA5B15EF233500163B66 /* Frame.m */; };
 		4088CA5F15EFDC3500163B66 /* production-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4088CA5E15EFDC3500163B66 /* production-settings.png */; };
-		4088CA6215F00B3500163B66 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 4088CA6115F00B3400163B66 /* Position.m */; };
 		4088CA6515F56B3C00163B66 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4088CA6415F56B3C00163B66 /* NoteViewController.m */; };
 		4088CA6815F56BBB00163B66 /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4088CA6715F56BBB00163B66 /* NoteView.m */; };
 		4088CA6B15F588FF00163B66 /* TimeLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4088CA6A15F588FE00163B66 /* TimeLineViewCell.m */; };
@@ -41,10 +37,6 @@
 		40A656E115C1B9D200DEC2ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40A656DF15C1B9D200DEC2ED /* InfoPlist.strings */; };
 		40A656E315C1B9D200DEC2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656E215C1B9D200DEC2ED /* main.m */; };
 		40A656E715C1B9D200DEC2ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656E615C1B9D200DEC2ED /* AppDelegate.m */; };
-		40A656EF15C1BD3B00DEC2ED /* Production.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656EE15C1BD3B00DEC2ED /* Production.m */; };
-		40A656F915C1BF4900DEC2ED /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656F815C1BF4900DEC2ED /* SetPiece.m */; };
-		40A656FC15C1BF5C00DEC2ED /* Performer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656FB15C1BF5C00DEC2ED /* Performer.m */; };
-		40A6570415C1D52E00DEC2ED /* Stage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570315C1D52E00DEC2ED /* Stage.m */; };
 		40A6570A15C1E7B300DEC2ED /* MainStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570915C1E7B300DEC2ED /* MainStageView.m */; };
 		40A6570E15C1ED3500DEC2ED /* MainStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570D15C1ED3400DEC2ED /* MainStageViewController.m */; };
 		40A6571315C1EFF900DEC2ED /* Strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40A6571215C1EFF900DEC2ED /* Strings.plist */; };
@@ -59,10 +51,10 @@
 		571013BC16FA96AA00786F07 /* DummyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013BB16FA96AA00786F07 /* DummyMainViewController.m */; };
 		5757A4AF16D5EF14007D172C /* bg-bar-violet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5757A4AE16D5EF14007D172C /* bg-bar-violet.png */; };
 		864F9492171C7E21002756C9 /* AddGroupViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 864F9491171C7E21002756C9 /* AddGroupViewController.m */; };
+		864F94C3171C87BE002756C9 /* Actor.m in Sources */ = {isa = PBXBuildFile; fileRef = 864F94C2171C87BE002756C9 /* Actor.m */; };
 		865027D6170DC9F200B5B6E3 /* editProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D5170DC9F100B5B6E3 /* editProductionView.m */; };
 		865027D9170DD0B000B5B6E3 /* editProductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D8170DD0AF00B5B6E3 /* editProductionViewController.m */; };
 		86B4356F171738C8009BB3C4 /* TVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B4356E171738C8009BB3C4 /* TVNavigationController.m */; };
-		86B4357917176B55009BB3C4 /* DummyProductionView.c in Sources */ = {isa = PBXBuildFile; fileRef = 86B4357817176B53009BB3C4 /* DummyProductionView.c */; };
 		86B43596171C7DBD009BB3C4 /* Scene.m in Resources */ = {isa = PBXBuildFile; fileRef = 86B43595171C7DBD009BB3C4 /* Scene.m */; };
 /* End PBXBuildFile section */
 
@@ -90,10 +82,6 @@
 		4071F9F015DE066900714075 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Controllers/ContactsViewController.m; sourceTree = "<group>"; };
 		4071F9F215DE068800714075 /* ContactsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsView.h; path = Views/ContactsView.h; sourceTree = "<group>"; };
 		4071F9F315DE068800714075 /* ContactsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsView.m; path = Views/ContactsView.m; sourceTree = "<group>"; };
-		4073FC3C15EC7ACD00E1A96D /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = Models/Group.h; sourceTree = "<group>"; };
-		4073FC3D15EC7ACD00E1A96D /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = Models/Group.m; sourceTree = "<group>"; };
-		4073FC4015EC7D4500E1A96D /* userData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userData.h; path = Models/userData.h; sourceTree = "<group>"; };
-		4073FC4115EC7D4500E1A96D /* userData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userData.m; path = Models/userData.m; sourceTree = "<group>"; };
 		4073FC4315ED8A3400E1A96D /* performerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = performerCell.h; path = Views/performerCell.h; sourceTree = "<group>"; };
 		4073FC4415ED8A3400E1A96D /* performerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = performerCell.m; path = Views/performerCell.m; sourceTree = "<group>"; };
 		4073FC4615EEC34200E1A96D /* CreatePerformance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatePerformance.h; path = Views/CreatePerformance.h; sourceTree = "<group>"; };
@@ -104,11 +92,7 @@
 		407677F915D0794100057063 /* RadialGloss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadialGloss.m; path = Views/RadialGloss.m; sourceTree = "<group>"; };
 		4076781215D6D6E700057063 /* GroupViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupViewCell.h; path = Views/GroupViewCell.h; sourceTree = "<group>"; };
 		4076781315D6D6E700057063 /* GroupViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupViewCell.m; path = Views/GroupViewCell.m; sourceTree = "<group>"; };
-		4088CA5A15EF233500163B66 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frame.h; path = Models/Frame.h; sourceTree = "<group>"; };
-		4088CA5B15EF233500163B66 /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Frame.m; path = Models/Frame.m; sourceTree = "<group>"; };
 		4088CA5E15EFDC3500163B66 /* production-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "production-settings.png"; sourceTree = "<group>"; };
-		4088CA6015F00B3400163B66 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Position.h; path = Models/Position.h; sourceTree = "<group>"; };
-		4088CA6115F00B3400163B66 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Position.m; path = Models/Position.m; sourceTree = "<group>"; };
 		4088CA6315F56B3B00163B66 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteViewController.h; path = Controllers/NoteViewController.h; sourceTree = "<group>"; };
 		4088CA6415F56B3C00163B66 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteViewController.m; path = Controllers/NoteViewController.m; sourceTree = "<group>"; };
 		4088CA6615F56BBB00163B66 /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteView.h; path = Views/NoteView.h; sourceTree = "<group>"; };
@@ -125,16 +109,8 @@
 		40A656E415C1B9D200DEC2ED /* BlockLight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockLight-Prefix.pch"; sourceTree = "<group>"; };
 		40A656E515C1B9D200DEC2ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40A656E615C1B9D200DEC2ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		40A656ED15C1BD3B00DEC2ED /* Production.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Production.h; path = Models/Production.h; sourceTree = "<group>"; };
-		40A656EE15C1BD3B00DEC2ED /* Production.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Production.m; path = Models/Production.m; sourceTree = "<group>"; };
 		40A656F015C1BEE600DEC2ED /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		40A656F715C1BF4900DEC2ED /* SetPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPiece.h; path = Models/SetPiece.h; sourceTree = "<group>"; };
-		40A656F815C1BF4900DEC2ED /* SetPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPiece.m; path = Models/SetPiece.m; sourceTree = "<group>"; };
-		40A656FA15C1BF5C00DEC2ED /* Performer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Performer.h; path = Models/Performer.h; sourceTree = "<group>"; };
-		40A656FB15C1BF5C00DEC2ED /* Performer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Performer.m; path = Models/Performer.m; sourceTree = "<group>"; };
 		40A656FD15C1C8FB00DEC2ED /* Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defaults.h; sourceTree = "<group>"; };
-		40A6570215C1D52D00DEC2ED /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage.h; path = Models/Stage.h; sourceTree = "<group>"; };
-		40A6570315C1D52E00DEC2ED /* Stage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stage.m; path = Models/Stage.m; sourceTree = "<group>"; };
 		40A6570815C1E7B300DEC2ED /* MainStageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainStageView.h; path = Views/MainStageView.h; sourceTree = "<group>"; };
 		40A6570915C1E7B300DEC2ED /* MainStageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainStageView.m; path = Views/MainStageView.m; sourceTree = "<group>"; };
 		40A6570C15C1ED3400DEC2ED /* MainStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainStageViewController.h; path = Controllers/MainStageViewController.h; sourceTree = "<group>"; };
@@ -159,14 +135,30 @@
 		571013BB16FA96AA00786F07 /* DummyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyMainViewController.m; sourceTree = "<group>"; };
 		5757A4AE16D5EF14007D172C /* bg-bar-violet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-bar-violet.png"; sourceTree = "<group>"; };
 		864F9491171C7E21002756C9 /* AddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGroupViewController.m; sourceTree = "<group>"; };
+		864F94AD171C8304002756C9 /* Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		864F94AE171C8304002756C9 /* Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; };
+		864F94AF171C8304002756C9 /* Group.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		864F94B0171C8304002756C9 /* Group.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		864F94B1171C8304002756C9 /* Performer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Performer.h; sourceTree = "<group>"; };
+		864F94B2171C8304002756C9 /* Performer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Performer.m; sourceTree = "<group>"; };
+		864F94B3171C8304002756C9 /* Position.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		864F94B4171C8304002756C9 /* Position.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		864F94B5171C8304002756C9 /* Production.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Production.h; sourceTree = "<group>"; };
+		864F94B6171C8304002756C9 /* Production.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Production.m; sourceTree = "<group>"; };
+		864F94B7171C8304002756C9 /* SetPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPiece.h; sourceTree = "<group>"; };
+		864F94B8171C8304002756C9 /* SetPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPiece.m; sourceTree = "<group>"; };
+		864F94B9171C8304002756C9 /* Stage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stage.h; sourceTree = "<group>"; };
+		864F94BA171C8304002756C9 /* Stage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stage.m; sourceTree = "<group>"; };
+		864F94BB171C8304002756C9 /* userData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = userData.h; sourceTree = "<group>"; };
+		864F94BC171C8304002756C9 /* userData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userData.m; sourceTree = "<group>"; };
+		864F94C1171C87AC002756C9 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		864F94C2171C87BE002756C9 /* Actor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actor.m; sourceTree = "<group>"; };
 		865027D3170DC9D600B5B6E3 /* editProductionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = editProductionView.h; sourceTree = "<group>"; };
 		865027D5170DC9F100B5B6E3 /* editProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editProductionView.m; sourceTree = "<group>"; };
 		865027D7170DD01E00B5B6E3 /* editProductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editProductionViewController.h; sourceTree = "<group>"; };
 		865027D8170DD0AF00B5B6E3 /* editProductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editProductionViewController.m; sourceTree = "<group>"; };
 		86B4356C1717388D009BB3C4 /* TVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNavigationController.h; sourceTree = "<group>"; };
 		86B4356E171738C8009BB3C4 /* TVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationController.m; sourceTree = "<group>"; };
-		86B4357717176B45009BB3C4 /* DummyProductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyProductionView.h; sourceTree = "<group>"; };
-		86B4357817176B53009BB3C4 /* DummyProductionView.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DummyProductionView.c; sourceTree = "<group>"; };
 		86B43595171C7DBD009BB3C4 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,24 +234,26 @@
 		40A656F315C1BEF800DEC2ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40A656ED15C1BD3B00DEC2ED /* Production.h */,
-				40A656EE15C1BD3B00DEC2ED /* Production.m */,
-				40A656F715C1BF4900DEC2ED /* SetPiece.h */,
-				40A656F815C1BF4900DEC2ED /* SetPiece.m */,
-				40A656FA15C1BF5C00DEC2ED /* Performer.h */,
-				40A656FB15C1BF5C00DEC2ED /* Performer.m */,
-				4073FC3C15EC7ACD00E1A96D /* Group.h */,
-				4073FC3D15EC7ACD00E1A96D /* Group.m */,
-				40A6570215C1D52D00DEC2ED /* Stage.h */,
-				40A6570315C1D52E00DEC2ED /* Stage.m */,
+				864F94AD171C8304002756C9 /* Frame.h */,
+				864F94AE171C8304002756C9 /* Frame.m */,
+				864F94AF171C8304002756C9 /* Group.h */,
+				864F94B0171C8304002756C9 /* Group.m */,
+				864F94B1171C8304002756C9 /* Performer.h */,
+				864F94B2171C8304002756C9 /* Performer.m */,
+				864F94B3171C8304002756C9 /* Position.h */,
+				864F94B4171C8304002756C9 /* Position.m */,
+				864F94B5171C8304002756C9 /* Production.h */,
+				864F94B6171C8304002756C9 /* Production.m */,
+				864F94B7171C8304002756C9 /* SetPiece.h */,
+				864F94B8171C8304002756C9 /* SetPiece.m */,
+				864F94B9171C8304002756C9 /* Stage.h */,
+				864F94BA171C8304002756C9 /* Stage.m */,
+				864F94BB171C8304002756C9 /* userData.h */,
+				864F94BC171C8304002756C9 /* userData.m */,
 				40A656F015C1BEE600DEC2ED /* Scene.h */,
 				86B43595171C7DBD009BB3C4 /* Scene.m */,
-				4073FC4015EC7D4500E1A96D /* userData.h */,
-				4073FC4115EC7D4500E1A96D /* userData.m */,
-				4088CA5A15EF233500163B66 /* Frame.h */,
-				4088CA5B15EF233500163B66 /* Frame.m */,
-				4088CA6015F00B3400163B66 /* Position.h */,
-				4088CA6115F00B3400163B66 /* Position.m */,
+				864F94C1171C87AC002756C9 /* Actor.h */,
+				864F94C2171C87BE002756C9 /* Actor.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,8 +301,6 @@
 				571013B416FA45AF00786F07 /* DummyMainView.m */,
 				865027D3170DC9D600B5B6E3 /* editProductionView.h */,
 				865027D5170DC9F100B5B6E3 /* editProductionView.m */,
-				86B4357717176B45009BB3C4 /* DummyProductionView.h */,
-				86B4357817176B53009BB3C4 /* DummyProductionView.c */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -441,10 +433,6 @@
 			files = (
 				40A656E315C1B9D200DEC2ED /* main.m in Sources */,
 				40A656E715C1B9D200DEC2ED /* AppDelegate.m in Sources */,
-				40A656EF15C1BD3B00DEC2ED /* Production.m in Sources */,
-				40A656F915C1BF4900DEC2ED /* SetPiece.m in Sources */,
-				40A656FC15C1BF5C00DEC2ED /* Performer.m in Sources */,
-				40A6570415C1D52E00DEC2ED /* Stage.m in Sources */,
 				40A6570A15C1E7B300DEC2ED /* MainStageView.m in Sources */,
 				40A6570E15C1ED3500DEC2ED /* MainStageViewController.m in Sources */,
 				40A6571615C7601100DEC2ED /* DimensionsViewController.m in Sources */,
@@ -462,13 +450,9 @@
 				40E4F75015E45BAE0058483D /* CreateGroupView.m in Sources */,
 				40E4F75715E5907E0058483D /* CreateMemberView.m in Sources */,
 				40E4F75A15E590B60058483D /* AddMemberViewController.m in Sources */,
-				4073FC3E15EC7ACD00E1A96D /* Group.m in Sources */,
-				4073FC4215EC7D4500E1A96D /* userData.m in Sources */,
 				4073FC4515ED8A3400E1A96D /* performerCell.m in Sources */,
 				4073FC4815EEC34300E1A96D /* CreatePerformance.m in Sources */,
 				4073FC4B15EEC36A00E1A96D /* AddPerformanceViewController.m in Sources */,
-				4088CA5C15EF233500163B66 /* Frame.m in Sources */,
-				4088CA6215F00B3500163B66 /* Position.m in Sources */,
 				4088CA6515F56B3C00163B66 /* NoteViewController.m in Sources */,
 				4088CA6815F56BBB00163B66 /* NoteView.m in Sources */,
 				4088CA6B15F588FF00163B66 /* TimeLineViewCell.m in Sources */,
@@ -477,7 +461,7 @@
 				865027D6170DC9F200B5B6E3 /* editProductionView.m in Sources */,
 				865027D9170DD0B000B5B6E3 /* editProductionViewController.m in Sources */,
 				86B4356F171738C8009BB3C4 /* TVNavigationController.m in Sources */,
-				86B4357917176B55009BB3C4 /* DummyProductionView.c in Sources */,
+				864F94C3171C87BE002756C9 /* Actor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
