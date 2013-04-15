@@ -50,6 +50,7 @@
 		571013B516FA45AF00786F07 /* DummyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013B416FA45AF00786F07 /* DummyMainView.m */; };
 		571013BC16FA96AA00786F07 /* DummyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013BB16FA96AA00786F07 /* DummyMainViewController.m */; };
 		5757A4AF16D5EF14007D172C /* bg-bar-violet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5757A4AE16D5EF14007D172C /* bg-bar-violet.png */; };
+		5761BF5E171CC732001365AD /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761BF5D171CC732001365AD /* Note.m */; };
 		864F9492171C7E21002756C9 /* AddGroupViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 864F9491171C7E21002756C9 /* AddGroupViewController.m */; };
 		864F94C3171C87BE002756C9 /* Actor.m in Sources */ = {isa = PBXBuildFile; fileRef = 864F94C2171C87BE002756C9 /* Actor.m */; };
 		865027D6170DC9F200B5B6E3 /* editProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D5170DC9F100B5B6E3 /* editProductionView.m */; };
@@ -134,6 +135,8 @@
 		571013BA16FA96AA00786F07 /* DummyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyMainViewController.h; sourceTree = "<group>"; };
 		571013BB16FA96AA00786F07 /* DummyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyMainViewController.m; sourceTree = "<group>"; };
 		5757A4AE16D5EF14007D172C /* bg-bar-violet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-bar-violet.png"; sourceTree = "<group>"; };
+		5761BF5C171CC732001365AD /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		5761BF5D171CC732001365AD /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		864F9491171C7E21002756C9 /* AddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGroupViewController.m; sourceTree = "<group>"; };
 		864F94AD171C8304002756C9 /* Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
 		864F94AE171C8304002756C9 /* Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 		40A656F315C1BEF800DEC2ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5761BF5C171CC732001365AD /* Note.h */,
+				5761BF5D171CC732001365AD /* Note.m */,
 				864F94AD171C8304002756C9 /* Frame.h */,
 				864F94AE171C8304002756C9 /* Frame.m */,
 				864F94AF171C8304002756C9 /* Group.h */,
@@ -462,6 +467,7 @@
 				865027D9170DD0B000B5B6E3 /* editProductionViewController.m in Sources */,
 				86B4356F171738C8009BB3C4 /* TVNavigationController.m in Sources */,
 				864F94C3171C87BE002756C9 /* Actor.m in Sources */,
+				5761BF5E171CC732001365AD /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
