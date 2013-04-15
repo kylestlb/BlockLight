@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface userData : NSObject{
-  
   NSMutableArray* _groups;
   NSNumber* _uniqueGroupID;
   NSNumber* _uniquePerformerID; 

@@ -16,19 +16,13 @@
 @synthesize name = _name;
 @synthesize stage = _stage;
 @synthesize scenes = _scenes;
-@synthesize performers = _performers;
-@synthesize setPieces = _setPieces;
-@synthesize notes = _notes;
+@synthesize curScene = _curScene;
 @synthesize date = _date;
 @synthesize location = _location;
 @synthesize stageManager = _stageManager;
-@synthesize frames = _frames;
-@synthesize numFrames = _numFrames;
-@synthesize curFrame = _curFrame;
 @synthesize layouts = _layouts;
 
 -(id) init{
-  
   self = [super init]; 
   
   if(self == nil) 
@@ -36,35 +30,25 @@
   
   self.scenes = [[NSMutableArray alloc] initWithCapacity:5];
   self.stage = [[Stage alloc] init];
-  self.performers = [[NSMutableArray alloc] initWithCapacity:20];
-  self.setPieces = [[NSMutableArray alloc] initWithCapacity:100];
-  self.notes = [[NSMutableArray alloc] initWithCapacity:20];
-  _frames = [[NSMutableArray alloc] initWithCapacity:100];
   _layouts = [[NSMutableDictionary alloc] init];
-  _numFrames = 1;
-  _curFrame = 0; 
+  _curScene = 0;
   return self; 
 }
 
--(void)addFrame{
-  _numFrames = _numFrames +1; 
+-(void)addScene{
+    Scene* newScene = [[Scene alloc] init];
+    [_scenes addObject: newScene];
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder{
     [encoder encodeObject:_name forKey:@"productionName"];
     [encoder encodeObject:_stage forKey:@"productionStage"];
     [encoder encodeObject:_scenes forKey:@"productionScenes"];
-    [encoder encodeObject:_performers forKey:@"productionPerformers"];
-    [encoder encodeObject:_setPieces forKey:@"productionSetPieces"];
-    [encoder encodeObject:_notes forKey:@"productionNotes"];
+    [encoder encodeInt:_curScene forKey:@"productionCurScene"];
     [encoder encodeObject:_date forKey:@"productionDate"];
     [encoder encodeObject:_location forKey:@"productionLocation"];
     [encoder encodeObject:_stageManager forKey:@"productionStageManager"];
-    [encoder encodeObject:_frames forKey:@"productionFrames"];
-    [encoder encodeInt:_numFrames forKey:@"productionNumFrames"];
-    [encoder encodeInt:_curFrame forKey:@"productionCurFrame"];
     [encoder encodeObject:_layouts forKey:@"productionLayouts"];
-    
 }
 
 - (id)initWithCoder:(NSCoder *)decoder{
@@ -72,20 +56,13 @@
         self.name = [decoder decodeObjectForKey:@"productionName"];
         self.stage = [decoder decodeObjectForKey:@"productionStage"];
         self.scenes = [decoder decodeObjectForKey:@"productionScenes"];
-        self.performers = [decoder decodeObjectForKey:@"productionPerformers"];
-        self.setPieces = [decoder decodeObjectForKey:@"productionSetPieces"];
-        self.notes = [decoder decodeObjectForKey:@"productionNotes"];
+        self.curScene = [decoder decodeIntForKey:@"productionCurScene"];
         self.date = [decoder decodeObjectForKey:@"productionDate"];
         self.location = [decoder decodeObjectForKey:@"productionLocation"];
         self.stageManager = [decoder decodeObjectForKey:@"productionStageManager"];
-        self.frames = [decoder decodeObjectForKey:@"productionFrames"];
-        self.numFrames = [decoder decodeIntForKey:@"productionNumFrames"];
-        self.curFrame = [decoder decodeIntForKey:@"productionCurFrame"];
         self.layouts = [decoder decodeObjectForKey:@"productionLayouts"];
     }
     return self;
 }
-
-
 
 @end

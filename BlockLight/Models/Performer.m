@@ -12,6 +12,19 @@
 
 @implementation Performer
 
+@synthesize name = _name;
+@synthesize role = _role;
+@synthesize stagePresence = _stagePresence;
+@synthesize notes = _notes;
+@synthesize phoneNumber = _phoneNumber;
+@synthesize email = _email;
+@synthesize voice = _voice;
+@synthesize gender = _gender;
+@synthesize height = _height;
+@synthesize uniqueID = _uniqueID;
+
+@synthesize visible = _visible;
+@synthesize icon = _icon;
 
 -(id) init{
   self = [super init]; 
@@ -24,23 +37,6 @@
   
   return self;
 }
-
-
-
-@synthesize name = _name;
-@synthesize role = _role;
-@synthesize stagePresence = _stagePresence;
-@synthesize notes = _notes;
-@synthesize phoneNumber = _phoneNumber;
-@synthesize email = _email;
-@synthesize voice = _voice; 
-@synthesize gender = _gender; 
-
-@synthesize height = _height;
-@synthesize uniqueID = _uniqueID; 
-
-@synthesize visible = _visible; 
-@synthesize icon = _icon; 
 
 - (void)encodeWithCoder:(NSCoder *)encoder{
     [encoder encodeObject:_name forKey:@"performerName"];

@@ -20,13 +20,12 @@
 @synthesize measurementType = _measurementType;
 
 -(id) init{
+    self = [super init]; 
   
-  self = [super init]; 
-  if(self == nil)
-    return nil; 
+    if(self == nil)
+        return nil; 
   
-  return self; 
-  
+    return self; 
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder{

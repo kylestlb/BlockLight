@@ -9,27 +9,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Position.h"
 
 @interface SetPiece : NSObject{
+    // set piece attributes
+    NSString* _name;
+    NSNumber* _uniqueID;
+    UIImage * _icon;
+    Position* _frameLocation;
   
-  // set piece attributes 
-  NSNumber* _uniqueID;
-  NSString* _name; 
-  
-  // Display Data 
-  BOOL _visible; 
-  NSMutableArray* _frameLocation; 
-  UIImage * _icon; 
-  
+    BOOL _visible;
 }
 
-@property (strong) NSNumber* uniqueID; 
 @property (strong) NSString* name;
+@property (strong) NSNumber* uniqueID;
+@property (strong) UIImage * icon;
+@property (strong) Position* frameLocation;
 
-
-@property  (nonatomic) BOOL visible; 
-@property (strong) NSMutableArray* frameLocation; 
-@property (nonatomic, strong) UIImage* icon;
-
+@property BOOL visible;
 
 @end

@@ -33,7 +33,6 @@ ProductionViewController * _productionViewController;
 	///*
     Group* group1 = [[Group alloc] init];
     group1.name = @"Group 1";
-    group1.type = @"Some type";
     group1.uniqueID = _userData.nextUniqueGroupID;
     //got from AddPerformanceViewController
     Production* prod1_1 = [[Production alloc] init];
@@ -61,7 +60,6 @@ ProductionViewController * _productionViewController;
     
     Group* group2 = [[Group alloc] init];
     group2.name = @"Group 2";
-    group2.type = @"Some type";
     group2.uniqueID = _userData.nextUniqueGroupID;
 	[_userData.groups addObject:group2];
 	//*/
@@ -80,7 +78,6 @@ ProductionViewController * _productionViewController;
         printf("no saved file");
         Group* group1 = [[Group alloc] init];
         group1.name = @"Group 1";
-        group1.type = @"Some type";
         group1.uniqueID = _userData.nextUniqueGroupID;
         [_userData.groups addObject:group1];
     }

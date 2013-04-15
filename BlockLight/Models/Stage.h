@@ -12,7 +12,6 @@
 #import "Defaults.h"
 
 @interface Stage : NSObject{
-  
   // Stage Attributes
   NSString* _name; 
   NSNumber* _width; 
@@ -20,8 +19,6 @@
   NSNumber* _gridOpacity; 
   NSNumber* _gridSpacing; 
   MeasurementType _measurementType; 
-  
-  
 }
 
 @property (strong) NSString* name; 

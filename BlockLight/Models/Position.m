@@ -1,10 +1,10 @@
 //
 //  Position.m
 //  BlockLight
-//
-//  This allows for easy storage of a performers position inside of a gesture recognizer 
-//
-//  Created by Barrett Ames on 8/30/12.
+//  
+//  Just a convience class for holding the location of things 
+// 
+//  Created by Barrett Ames on 7/26/12.
 //  Copyright (c) 2012 BlockLight. All rights reserved.
 //
 
@@ -12,31 +12,36 @@
 
 @implementation Position
 
-@synthesize x;
-@synthesize y; 
+@synthesize xCoordinate = _xCoordinate;
+@synthesize yCoordinate = _yCoordinate;
 
--(id) init{
+-(id)init{
+  self = [super self]; 
+  if(self == nil) 
+    return nil; 
   
-  self = [super init];
+  self.xCoordinate = [NSNumber numberWithInt:0]; 
+  self.yCoordinate = [NSNumber numberWithInt:0];
   
-  if(self == nil)
-    return nil;
-
   return self; 
 }
 
+-(void) updateX:(NSNumber *)x Y:(NSNumber *)y{
+  self.xCoordinate = x; 
+  self.yCoordinate = y; 
+}
+
 - (void)encodeWithCoder:(NSCoder *)encoder{
-    [encoder encodeInt:x forKey:@"positionX"];
-    [encoder encodeInt:y forKey:@"positionY"];
+    [encoder encodeObject:_xCoordinate forKey:@"PositionXCoor"];
+    [encoder encodeObject:_yCoordinate forKey:@"PositionYCoor"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder{
     if(self = [super init]){
-        self.x = [decoder decodeIntForKey:@"positionX"];
-        self.y = [decoder decodeIntForKey:@"positionY"];
+        self.xCoordinate = [decoder decodeObjectForKey:@"PositionXCoor"];
+        self.yCoordinate = [decoder decodeObjectForKey:@"PostionYCoor"];
     }
     return self;
 }
-
 
 @end
