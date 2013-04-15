@@ -14,11 +14,11 @@
     // scene attributes 
     NSString* _name; 
     NSMutableArray* _frames;
-    NSNumber* _curFrame;
+    NSInteger _curFrame;
 }
 
 @property (strong) NSString* name; 
 @property (strong) NSMutableArray* frames;
-@property (strong) NSNumber* curFrame;
+@property NSInteger curFrame;
 
 @end

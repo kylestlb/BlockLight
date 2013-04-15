@@ -28,14 +28,14 @@
 - (void)encodeWithCoder:(NSCoder *)encoder{
     [encoder encodeObject:_name forKey:@"sceneName"];
     [encoder encodeObject:_frames forKey:@"sceneFrames"];
-    [encoder encodeObject:_curFrame forKey:@"sceneCurFrame"];
+    [encoder encodeInt:_curFrame forKey:@"sceneCurFrame"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder{
     if(self = [super init]){
         self.name = [decoder decodeObjectForKey:@"sceneName"];
         self.frames = [decoder decodeObjectForKey:@"sceneFrames"];
-        self.curFrame = [decoder decodeObjectForKey:@"sceneCurFrame"];
+        self.curFrame = [decoder decodeIntForKey:@"sceneCurFrame"];
     }
     return self;
 }
