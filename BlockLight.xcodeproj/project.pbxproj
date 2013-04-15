@@ -42,10 +42,8 @@
 		40A656E315C1B9D200DEC2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656E215C1B9D200DEC2ED /* main.m */; };
 		40A656E715C1B9D200DEC2ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656E615C1B9D200DEC2ED /* AppDelegate.m */; };
 		40A656EF15C1BD3B00DEC2ED /* Production.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656EE15C1BD3B00DEC2ED /* Production.m */; };
-		40A656F215C1BEE600DEC2ED /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656F115C1BEE600DEC2ED /* Scene.m */; };
 		40A656F915C1BF4900DEC2ED /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656F815C1BF4900DEC2ED /* SetPiece.m */; };
 		40A656FC15C1BF5C00DEC2ED /* Performer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A656FB15C1BF5C00DEC2ED /* Performer.m */; };
-		40A6570115C1CB6D00DEC2ED /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570015C1CB6D00DEC2ED /* Location.m */; };
 		40A6570415C1D52E00DEC2ED /* Stage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570315C1D52E00DEC2ED /* Stage.m */; };
 		40A6570A15C1E7B300DEC2ED /* MainStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570915C1E7B300DEC2ED /* MainStageView.m */; };
 		40A6570E15C1ED3500DEC2ED /* MainStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A6570D15C1ED3400DEC2ED /* MainStageViewController.m */; };
@@ -55,16 +53,17 @@
 		40A6571B15C7661500DEC2ED /* redCurtains.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 40A6571A15C7661500DEC2ED /* redCurtains.jpeg */; };
 		40BC356815CA437F00134880 /* performer.png in Resources */ = {isa = PBXBuildFile; fileRef = 40BC356715CA437F00134880 /* performer.png */; };
 		40E4F75015E45BAE0058483D /* CreateGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E4F74F15E45BAE0058483D /* CreateGroupView.m */; };
-		40E4F75415E496D00058483D /* AddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E4F75315E496D00058483D /* AddGroupViewController.m */; };
 		40E4F75715E5907E0058483D /* CreateMemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E4F75615E5907D0058483D /* CreateMemberView.m */; };
 		40E4F75A15E590B60058483D /* AddMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E4F75915E590B50058483D /* AddMemberViewController.m */; };
 		571013B516FA45AF00786F07 /* DummyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013B416FA45AF00786F07 /* DummyMainView.m */; };
 		571013BC16FA96AA00786F07 /* DummyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571013BB16FA96AA00786F07 /* DummyMainViewController.m */; };
 		5757A4AF16D5EF14007D172C /* bg-bar-violet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5757A4AE16D5EF14007D172C /* bg-bar-violet.png */; };
+		864F9492171C7E21002756C9 /* AddGroupViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 864F9491171C7E21002756C9 /* AddGroupViewController.m */; };
 		865027D6170DC9F200B5B6E3 /* editProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D5170DC9F100B5B6E3 /* editProductionView.m */; };
 		865027D9170DD0B000B5B6E3 /* editProductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865027D8170DD0AF00B5B6E3 /* editProductionViewController.m */; };
 		86B4356F171738C8009BB3C4 /* TVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B4356E171738C8009BB3C4 /* TVNavigationController.m */; };
 		86B4357917176B55009BB3C4 /* DummyProductionView.c in Sources */ = {isa = PBXBuildFile; fileRef = 86B4357817176B53009BB3C4 /* DummyProductionView.c */; };
+		86B43596171C7DBD009BB3C4 /* Scene.m in Resources */ = {isa = PBXBuildFile; fileRef = 86B43595171C7DBD009BB3C4 /* Scene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,14 +128,11 @@
 		40A656ED15C1BD3B00DEC2ED /* Production.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Production.h; path = Models/Production.h; sourceTree = "<group>"; };
 		40A656EE15C1BD3B00DEC2ED /* Production.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Production.m; path = Models/Production.m; sourceTree = "<group>"; };
 		40A656F015C1BEE600DEC2ED /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		40A656F115C1BEE600DEC2ED /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		40A656F715C1BF4900DEC2ED /* SetPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPiece.h; path = Models/SetPiece.h; sourceTree = "<group>"; };
 		40A656F815C1BF4900DEC2ED /* SetPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPiece.m; path = Models/SetPiece.m; sourceTree = "<group>"; };
 		40A656FA15C1BF5C00DEC2ED /* Performer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Performer.h; path = Models/Performer.h; sourceTree = "<group>"; };
 		40A656FB15C1BF5C00DEC2ED /* Performer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Performer.m; path = Models/Performer.m; sourceTree = "<group>"; };
 		40A656FD15C1C8FB00DEC2ED /* Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defaults.h; sourceTree = "<group>"; };
-		40A656FF15C1CB6D00DEC2ED /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		40A6570015C1CB6D00DEC2ED /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		40A6570215C1D52D00DEC2ED /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage.h; path = Models/Stage.h; sourceTree = "<group>"; };
 		40A6570315C1D52E00DEC2ED /* Stage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stage.m; path = Models/Stage.m; sourceTree = "<group>"; };
 		40A6570815C1E7B300DEC2ED /* MainStageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainStageView.h; path = Views/MainStageView.h; sourceTree = "<group>"; };
@@ -153,7 +149,6 @@
 		40E4F74E15E45BAE0058483D /* CreateGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateGroupView.h; path = Views/CreateGroupView.h; sourceTree = "<group>"; };
 		40E4F74F15E45BAE0058483D /* CreateGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateGroupView.m; path = Views/CreateGroupView.m; sourceTree = "<group>"; };
 		40E4F75215E496D00058483D /* AddGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGroupViewController.h; path = Controllers/AddGroupViewController.h; sourceTree = "<group>"; };
-		40E4F75315E496D00058483D /* AddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGroupViewController.m; path = Controllers/AddGroupViewController.m; sourceTree = "<group>"; };
 		40E4F75515E5907D0058483D /* CreateMemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateMemberView.h; path = Views/CreateMemberView.h; sourceTree = "<group>"; };
 		40E4F75615E5907D0058483D /* CreateMemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateMemberView.m; path = Views/CreateMemberView.m; sourceTree = "<group>"; };
 		40E4F75815E590B50058483D /* AddMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddMemberViewController.h; path = Controllers/AddMemberViewController.h; sourceTree = "<group>"; };
@@ -163,6 +158,7 @@
 		571013BA16FA96AA00786F07 /* DummyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyMainViewController.h; sourceTree = "<group>"; };
 		571013BB16FA96AA00786F07 /* DummyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyMainViewController.m; sourceTree = "<group>"; };
 		5757A4AE16D5EF14007D172C /* bg-bar-violet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-bar-violet.png"; sourceTree = "<group>"; };
+		864F9491171C7E21002756C9 /* AddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGroupViewController.m; sourceTree = "<group>"; };
 		865027D3170DC9D600B5B6E3 /* editProductionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = editProductionView.h; sourceTree = "<group>"; };
 		865027D5170DC9F100B5B6E3 /* editProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editProductionView.m; sourceTree = "<group>"; };
 		865027D7170DD01E00B5B6E3 /* editProductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editProductionViewController.h; sourceTree = "<group>"; };
@@ -171,6 +167,7 @@
 		86B4356E171738C8009BB3C4 /* TVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNavigationController.m; sourceTree = "<group>"; };
 		86B4357717176B45009BB3C4 /* DummyProductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyProductionView.h; sourceTree = "<group>"; };
 		86B4357817176B53009BB3C4 /* DummyProductionView.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DummyProductionView.c; sourceTree = "<group>"; };
+		86B43595171C7DBD009BB3C4 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +253,7 @@
 				40A6570215C1D52D00DEC2ED /* Stage.h */,
 				40A6570315C1D52E00DEC2ED /* Stage.m */,
 				40A656F015C1BEE600DEC2ED /* Scene.h */,
-				40A656F115C1BEE600DEC2ED /* Scene.m */,
+				86B43595171C7DBD009BB3C4 /* Scene.m */,
 				4073FC4015EC7D4500E1A96D /* userData.h */,
 				4073FC4115EC7D4500E1A96D /* userData.m */,
 				4088CA5A15EF233500163B66 /* Frame.h */,
@@ -271,8 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				40A656FD15C1C8FB00DEC2ED /* Defaults.h */,
-				40A656FF15C1CB6D00DEC2ED /* Location.h */,
-				40A6570015C1CB6D00DEC2ED /* Location.m */,
 			);
 			name = "Utility Files";
 			sourceTree = "<group>";
@@ -336,7 +331,7 @@
 				4071F9EF15DE066900714075 /* ContactsViewController.h */,
 				4071F9F015DE066900714075 /* ContactsViewController.m */,
 				40E4F75215E496D00058483D /* AddGroupViewController.h */,
-				40E4F75315E496D00058483D /* AddGroupViewController.m */,
+				864F9491171C7E21002756C9 /* AddGroupViewController.m */,
 				40E4F75815E590B50058483D /* AddMemberViewController.h */,
 				40E4F75915E590B50058483D /* AddMemberViewController.m */,
 				4073FC4915EEC36900E1A96D /* AddPerformanceViewController.h */,
@@ -432,6 +427,8 @@
 				4071F9ED15DE048900714075 /* bg-production.jpg in Resources */,
 				4088CA5F15EFDC3500163B66 /* production-settings.png in Resources */,
 				5757A4AF16D5EF14007D172C /* bg-bar-violet.png in Resources */,
+				86B43596171C7DBD009BB3C4 /* Scene.m in Resources */,
+				864F9492171C7E21002756C9 /* AddGroupViewController.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,10 +442,8 @@
 				40A656E315C1B9D200DEC2ED /* main.m in Sources */,
 				40A656E715C1B9D200DEC2ED /* AppDelegate.m in Sources */,
 				40A656EF15C1BD3B00DEC2ED /* Production.m in Sources */,
-				40A656F215C1BEE600DEC2ED /* Scene.m in Sources */,
 				40A656F915C1BF4900DEC2ED /* SetPiece.m in Sources */,
 				40A656FC15C1BF5C00DEC2ED /* Performer.m in Sources */,
-				40A6570115C1CB6D00DEC2ED /* Location.m in Sources */,
 				40A6570415C1D52E00DEC2ED /* Stage.m in Sources */,
 				40A6570A15C1E7B300DEC2ED /* MainStageView.m in Sources */,
 				40A6570E15C1ED3500DEC2ED /* MainStageViewController.m in Sources */,
@@ -465,7 +460,6 @@
 				4071F9F115DE066900714075 /* ContactsViewController.m in Sources */,
 				4071F9F415DE068800714075 /* ContactsView.m in Sources */,
 				40E4F75015E45BAE0058483D /* CreateGroupView.m in Sources */,
-				40E4F75415E496D00058483D /* AddGroupViewController.m in Sources */,
 				40E4F75715E5907E0058483D /* CreateMemberView.m in Sources */,
 				40E4F75A15E590B60058483D /* AddMemberViewController.m in Sources */,
 				4073FC3E15EC7ACD00E1A96D /* Group.m in Sources */,
