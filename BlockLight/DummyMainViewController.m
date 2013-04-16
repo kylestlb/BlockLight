@@ -511,11 +511,12 @@
 	else if([tableView isEqual:_performerTable]){
 		GridTableViewCell* gridCell;
 		//need to look at frame object and edit if necessary? that's what is going to be saved on timeline
-		Frame* frame = [_production.frames objectAtIndex:_production.curFrame];
+		Scene* current = [_production.scenes objectAtIndex:0];
+		Frame* frame = [current.frames objectAtIndex:current.curFrame];
 		gridCell = [[GridTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"gridReuse"];
 		
 		// Number of people not on the stage.
-		NSInteger benchwarmers = [_group.performers count] - [frame.performersOnStage count];
+		NSInteger benchwarmers = [_group.performers count] - [frame.actorsOnStage count];
 		
 		// The following statements determine which grid cells should filled.
 		if(row*3 < benchwarmers){
@@ -628,7 +629,8 @@
 	// Table for timeline
 	else if([tableView isEqual: _timeline]){
 		cell =   [[TimeLineViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"reuse"];
-		Frame* frame= [_production.frames objectAtIndex:indexPath.row];
+		Scene* current = [_production.scenes objectAtIndex:0];
+		Frame* frame= [current.frames objectAtIndex:indexPath.row];
 		cell.backgroundColor = [ UIColor colorWithPatternImage:frame.frameIcon];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		
@@ -656,9 +658,10 @@
 // Determines the number of rows in a section
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 	NSInteger rows =0;
+	Scene* current = [_production.scenes objectAtIndex:0];
 	
 	if([tableView isEqual: _timeline]){
-		rows = [_production.frames count];
+		rows = [current.frames count];
 	}
 	
 	else  if([tableView isEqual:_viewTable]){
@@ -680,8 +683,8 @@
 	
 	else if( [tableView isEqual:_performerTable]){
 		
-		Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame];
-		float benchwarmers = [_group.performers count] - [curFrame.performersOnStage count];
+		Frame* curFrame = [current.frames objectAtIndex:current.curFrame];
+		float benchwarmers = [_group.performers count] - [curFrame.actorsOnStage count];
 		rows = ceil(benchwarmers/3.0f);
 	}
 	
@@ -841,7 +844,7 @@
 	else if( [tableView isEqual:_timeline]){
 		_production.curFrame = indexPath.row;
 		Frame* frame = [_production.frames objectAtIndex:indexPath.row];
-		
+		// TODO: Need to fix the way that actors are put on stage with positions.
 		//puts performers in their positions
 		for( Performer* p in _group.performers){
 			NSString* key = [NSString stringWithFormat:@"%d",p.uniqueID.intValue];
@@ -925,6 +928,7 @@
 				
 				//'CREATE NEW FRAME' BUTTON
 			case 0:{
+				Scene* current = [_production.scenes objectAtIndex:0];
 				Frame* curFrame = [_production.frames objectAtIndex:_production.curFrame];
 				Frame* newFrame = [[Frame alloc]init];
 				newFrame.spikePath = [UIBezierPath bezierPathWithCGPath:curFrame.spikePath.CGPath];
